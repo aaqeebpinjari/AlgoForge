@@ -1,7 +1,7 @@
 <h1 align="center">🎯 AlgoVisualizer</h1> 
 <div align="center">
 <br />
-    <a href="https://algovisualizer.rhythmpahwa.tech/"><strong>Explore the Live Demo »</strong></a>
+    <a href="https://algo-visualizer-amber.vercel.app/"><strong>Explore the Live Demo »</strong></a>
     <br />
     <br />
 
@@ -25,7 +25,6 @@
 - <a href="#overview"> Overview </a>
 - <a href="#vision"> Vision</a>
 - <a href="#mission"> Mission</a>
-- <a href="#project-insights"> Project Insights </a>
 - <a href="#features"> Features</a>
 - <a href="#why-algovisualizer"> Why AlgoVisualizer</a>
 - <a href="#supported-algorithms">Supported Algorithms</a>
@@ -41,22 +40,7 @@
 - <a href="#sync-fork">Sync Your Fork with Upstream</a>
 - <a href="#analytics-performance">Analytics & Performance</a>
 - <a href="#educational-impact">Educational Impact</a>
-- <a href="#contributors">Contributors</a>
-- <a href="#documentation">Documentation</a>
-- <a href="#project-stats">Project Stats</a>
-- <a href="#future-roadmap">Future Roadmap</a>
-- <a href="#acknowledgments">Acknowledgments</a>
-- <a href="#contact">Contact</a>
-- <a href="#how-to-contribute">How to Contribute</a>
-- <a href="#contributing">Contributing</a>
-- <a href="#code-of-conduct">Code of Conduct</a>
-- <a href="#contribution-guidelines">Contribution Guidelines</a>
-- <a href="#suggestions-feedback"> Suggestions & Feedback</a>
-- <a href="#show-your-support">Show Your Support</a>
-- <a href="#license">License</a>
-- <a href="#stargazers">Stargazers</a>
-- <a href="#forkers">Forkers</a>
-- <a href="#project-admin">Project Admin</a>
+
 
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
 
@@ -86,35 +70,6 @@ Build the most comprehensive interactive algorithm visualization platform
 Provide step-by-step visual learning with multi-language code implementations
 Support educators with exportable content for classrooms and presentations
 Foster algorithmic thinking through interactive learning and community contributions
-
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
-
-<h2 id="project-insights">📊 Project Insights</h2>
-
-<table align="center">
-    <thead align="center">
-        <tr>
-            <td><b>🌟 Stars</b></td>
-            <td><b>🍴 Forks</b></td>
-            <td><b>🐛 Issues</b></td>
-            <td><b>🔔 Open PRs</b></td>
-            <td><b>🔕 Closed PRs</b></td>
-            <td><b>🛠️ Languages</b></td>
-            <td><b>👥 Contributors</b></td>
-        </tr>
-     </thead>
-    <tbody>
-         <tr>
-            <td><img alt="Stars" src="https://img.shields.io/github/stars/RhythmPahwa14/AlgoVisualizer?style=flat&logo=github"/></td>
-            <td><img alt="Forks" src="https://img.shields.io/github/forks/RhythmPahwa14/AlgoVisualizer?style=flat&logo=github"/></td>
-            <td><img alt="Issues" src="https://img.shields.io/github/issues/RhythmPahwa14/AlgoVisualizer?style=flat&logo=github"/></td>
-            <td><img alt="Open PRs" src="https://img.shields.io/github/issues-pr/RhythmPahwa14/AlgoVisualizer?style=flat&logo=github"/></td>
-            <td><img alt="Closed PRs" src="https://img.shields.io/github/issues-pr-closed/RhythmPahwa14/AlgoVisualizer?style=flat&color=critical&logo=github"/></td>
-            <td><img alt="Languages Count" src="https://img.shields.io/github/languages/count/RhythmPahwa14/AlgoVisualizer?style=flat&color=green&logo=github"></td>
-            <td><img alt="Contributors Count" src="https://img.shields.io/github/contributors/RhythmPahwa14/AlgoVisualizer?style=flat&color=blue&logo=github"/></td>
-        </tr>
-    </tbody>
-</table>
 
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
 
@@ -705,13 +660,10 @@ git push origin main
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
 
 # ScreenShots
-<img width="1888" height="829" alt="Screenshot 2025-10-13 210440" src="https://github.com/user-attachments/assets/0cdad087-7975-4a8a-8664-7e849243c088" />
+<img width="1919" height="843" alt="image" src="https://github.com/user-attachments/assets/b9bac705-4417-4434-a888-f79e123a9d69" />
 
-<img width="1898" height="786" alt="Screenshot 2025-10-13 210501" src="https://github.com/user-attachments/assets/8cb76638-0c6e-4ddc-81b1-e2aaa25ec5db" />
+<img width="1916" height="834" alt="image" src="https://github.com/user-attachments/assets/76d3de3e-64e9-4628-aab4-5af1f54e9aa8" />
 
-<img width="1896" height="831" alt="Screenshot 2025-10-13 210521" src="https://github.com/user-attachments/assets/02bcba5e-754d-40f4-adb4-068a2ba0f958" />
-
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
 
 <h2 id="analytics-performance">📈 Analytics & Performance</h2>
 
@@ -736,61 +688,11 @@ Perfect for:
 
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
 
-<h2 id="project-admins">🧑‍💻 Project Admins</h2>
 
-Meet our amazing project admins:
-<table>
-<tr>
-<td align="center">
-<a href="https://github.com/RhythmPahwa14">
-  <img src="https://avatars.githubusercontent.com/u/170720661?v=4" height="140px" width="140px" alt="Rhythm">
-</a><br>
-<sub><b>Rhythm</b><br>
-<a href="https://www.linkedin.com/in/rhythmpahwa14/" target="_blank">
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" width="20" height="20" alt="LinkedIn"/>
-</a>
-</sub>
-</td>
-<td align="center">
-<a href="https://github.com/sandeepvashishtha">
-  <img src="https://avatars.githubusercontent.com/u/64915843?v=4" height="140px" width="140px" alt="Sandeep">
-</a><br>
-<sub><b>Sandeep Vashishtha</b><br>
-<a href="https://www.linkedin.com/in/sandeepvashishtha/" target="_blank">
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" width="20" height="20" alt="LinkedIn"/>
-</a>
-</sub>
-</td>
-</tr>
-</table>
 
-<h2 id="project-admins">Project Maintainer</h2>
-
-Meet our amazing project maintainer:
-<table>
-<tr>
-<td align="center">
-<a href="https://github.com/aleenaharoldpeter">
-  <img src="https://avatars.githubusercontent.com/u/177343414?v=4" height="140px" width="140px" alt="Aleena Harold Peter">
-</a><br>
-<sub><b>Aleena Harold Peter</b><br>
-<a href="https://www.linkedin.com/in/aleena-harold-peter/" target="_blank">
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" width="20" height="20" alt="LinkedIn"/>
-</a>
-</sub>
-</td>
-</tr>
-</table>
 
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
 
-<h2 id="contributors">🏆 Contributors</h2>
-
-Meet our amazing contributors:
-- **[Shitanshu Kumar](https://github.com/Shitanshukumar607)**
-- **[Aditya Singh Rathore](https://github.com/Adez017)**
-- **[SHIVANI PRAJAPATI](https://github.com/Shivin1016)**
-- **[Aleenaharoldpeter](https://github.com/aleenaharoldpeter)**
 
 > Want to see your name here? [Contribute to the project!](#-contributing)
 
@@ -814,168 +716,4 @@ Meet our amazing contributors:
 
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
 
-<h2 id="future-roadmap"> 🔮 Future Roadmap</h2>
 
-- 🌐 **Graph Algorithms**: Advanced graph traversal and pathfinding
-- 🔢 **Mathematical Algorithms**: Number theory and computational mathematics
-- 🎮 **Gamification**: Achievement system and learning badges
-- 🌍 **Internationalization**: Multi-language support
-- 🤖 **AI Integration**: Algorithm recommendation system
-
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
-
-<h2 id="acknowledgments">🙏 Acknowledgments</h2>
-
-- Thanks to all contributors of this project 
-- Special shoutout to **GirlScript Summer of Code (GSSoC’25)** for the amazing community and support!
-- Built with dedication, collaboration, and lots of chai
-
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
-
-<h2 id="contact">📞 Contact</h2>
-
-- **GitHub Issues**: [Report bugs or request features](https://github.com/RhythmPahwa14/AlgoVisualizer/issues)
-- **Email**: Contact the maintainers for collaboration opportunities
-  
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
-
-<h2 id="how-to-contribute">🤝How to Contribute</h2>
-
-We love contributions from the community! Whether it's a bug report, a new feature, or a documentation improvement, we appreciate your help.
-
-***How to Contribute***
-
-1.  **Fork and clone the repository** and create a new branch for your changes.
-2.  **Make your changes** and ensure everything is working as expected.
-3.  **Submit a pull request** with a clear description of your changes.
-
-or check out <a href="#getting-started">Getting Started With Contributions</a>
-
-***Found a Bug?***
-
--   Check the [issue tracker](https://github.com/RhythmPahwa14/AlgoVisualizer/issues) to see if the bug has already been reported.
--   If not, open a new issue and provide as much detail as possible.
-
-***Have a Feature Idea?***
-
--   We'd love to hear it! Open an issue to discuss your idea.
-
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
-
-<h2 id="contributing">🤝 Contributing</h2>
-
-We welcome contributions from the community! Here's how you can help:
-
-### Ways to Contribute
-
-- 🐛 **Report Bugs**: Found an issue? Let us know!
-- 💡 **Suggest Features**: Have ideas for improvements?
-- 📝 **Improve Documentation**: Help make our docs better
-- 🎨 **Design Improvements**: Enhance the user interface
-- ⚡ **Performance Optimizations**: Make the app faster
-- 🧪 **Add Algorithms**: Implement new visualization algorithms
-
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
-
-<h2 id="code-of-conduct">📜 Code of Conduct</h2>
-
-Please refer to the [`Code of Conduct`](https://github.com/RhythmPahwa14/AlgoVisualizer/blob/master/CODE_OF_CONDUCT.md) for details on contributing guidelines and community standards.
-
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
-
-<h2 id="contribution-guidelines">🤝👤 Contribution Guidelines</h2>
-
-We love our contributors! If you'd like to help, please check out our [`CONTRIBUTE.md`](https://github.com/RhythmPahwa14/AlgoVisualizer/blob/master/CONTRIBUTING.md) file for guidelines.
-
->Thank you once again to all our contributors who has contributed to **AlgoVisualizer!** Your efforts are truly appreciated. 💖👏
-
-<!-- Contributors badge (auto-updating) -->
-
-[![Contributors](https://img.shields.io/github/contributors/RhythmPahwa14/AlgoVisualizer?style=for-the-badge)](https://github.com/RhythmPahwa14/AlgoVisualizer/graphs/contributors)
-
-<!-- Contributors avatars (auto-updating) -->
-<p align="left">
-  <a href="https://github.com/RhythmPahwa14/AlgoVisualizer/graphs/contributors">
-    <img src="https://contrib.rocks/image?repo=RhythmPahwa14/AlgoVisualizer" alt="Contributors" />
-  </a>
-</p>
-
-See the full list of contributors and their contributions on the [`GitHub Contributors Graph`](https://github.com/RhythmPahwa14/AlgoVisualizer/graphs/contributors).
-
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
-
-<h2 align="center">
-<p style="font-family:var(--ff-philosopher);font-size:3rem;"><b> Show some <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Red%20Heart.png" alt="Red Heart" width="40" height="40" /> by starring this awesome repository!
-</p>
-</h2>
-
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
-
-<h2 id="suggestions-feedback">💡 Suggestions & Feedback</h2>
-
-Feel free to open issues or discussions if you have any feedback, feature suggestions, or want to collaborate!
-
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
-
-<h2 id="show-your-support">🙌 Show Your Support</h2>
-
-*If you find AlgoVisualizer project helpful, give it a star! ⭐ to support more such educational initiatives:*
-
-- ⭐ **Starring the repository**
-- 🐦 **Sharing on social media**
-- 💬 **Telling your friends and colleagues**
-- 🤝 **Contributing to the project**
-
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
-
-<h2 id="license">📄 License</h2>
-
-This project is licensed under the MIT License - see the [`License`](https://github.com/RhythmPahwa14/AlgoVisualizer/blob/master/LICENSE) file for details.
-
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
-
-<h2 id="stargazers">⭐ Stargazers</h2>
-
-<div align="center">
-  <a href="https://github.com/RhythmPahwa14/AlgoVisualizer/stargazers">
-    <img src="https://reporoster.com/stars/RhythmPahwa14/AlgoVisualizer?type=svg&limit=100&names=false" alt="Stargazers" />
-  </a>
-</div>
-
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
-
-<h2 id="forkers">🍴 Forkers</h2>
-
-<div align="center">
-  <a href="https://github.com/RhythmPahwa14/AlgoVisualizer/members">
-    <img src="https://reporoster.com/forks/RhythmPahwa14/AlgoVisualizer?type=svg&limit=100&names=false" alt="Forkers" />
-  </a>
-</div>
-
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
-
-<h1 align="center"><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Glowing%20Star.png" alt="Glowing Star" width="25" height="25" /> Give us a Star and let's make magic! <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Glowing%20Star.png" alt="Glowing Star" width="25" height="25" /></h1>
-
-<p align="center">
-     <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Mirror%20Ball.png" alt="Mirror Ball" width="150" height="150" />
-</p>
-
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
-
-<h3 align="center"> 👨‍💻 Built with ❤️ by AlgoVisualizer Team</h3>
-<h4 align="center"> ❤️ Rhythm and Contributors ❤️ </h4>
-<p align="center">
-  <a href="https://github.com/RhythmPahwa14/AlgoVisualizer/issues">Open an Issue</a> | <a href="https://github.com/RhythmPahwa14/AlgoVisualizer">🌟 Star on GitHub</a> | <a href="https://algo-visualizer-amber.vercel.app/">🚀 Live Demo</a></p>
-
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=65&section=footer"/>
-
-<p align="center">
-  <a href="#top" style="font-size: 18px; padding: 8px 16px; display: inline-block; border: 1px solid #ccc; border-radius: 6px; text-decoration: none;">
-    ⬆️ Back to Top
-  </a>
-</p>
-
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
-
-> Ready to show off your coding achievements? Get started with **AlgoVisualizer** today! 🚀
-<!-- Thank you -->
