@@ -1,0 +1,115 @@
+/* ThemeToggle.css - Matches UserDropdown styling */
+
+.theme-toggle-button {
+  position: relative;
+  padding: 0.625rem;
+  border-radius: 9999px;
+  border: 1px solid;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  outline: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.theme-toggle-button:hover {
+  box-shadow: 0 4px 12px rgba(37, 117, 252, 0.25),
+              0 2px 6px rgba(0, 0, 0, 0.1);
+  transform: scale(1.05);
+}
+
+.theme-toggle-button:active {
+  transform: scale(0.95);
+}
+
+.theme-toggle-button:focus {
+  box-shadow: 0 0 0 2px var(--focus-ring-color, #3b82f6);
+}
+
+/* Light mode styling */
+.theme-toggle-button.light {
+  background: linear-gradient(135deg, #fef3c7 0%, #fed7aa 50%, #fecaca 100%);
+  border-color: rgba(251, 191, 36, 0.3);
+}
+
+.theme-toggle-button.light:hover {
+  background: linear-gradient(135deg, #fde68a 0%, #fcd34d 50%, #fb923c 100%);
+  border-color: rgba(251, 191, 36, 0.5);
+  box-shadow: 0 6px 20px rgba(251, 191, 36, 0.4),
+              0 3px 10px rgba(245, 158, 11, 0.3);
+}
+
+/* Dark mode styling */
+.theme-toggle-button.dark {
+  background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 50%, #a855f7 100%);
+  border-color: rgba(139, 92, 246, 0.3);
+}
+
+.theme-toggle-button.dark:hover {
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #a855f7 100%);
+  border-color: rgba(139, 92, 246, 0.5);
+  box-shadow: 0 6px 20px rgba(139, 92, 246, 0.5),
+              0 3px 10px rgba(109, 40, 217, 0.4);
+}
+
+/* Icon styling */
+.theme-toggle-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: #ffffff;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+.theme-toggle-button:hover .theme-toggle-icon {
+  transform: scale(1.1) rotate(12deg);
+}
+
+.theme-toggle-button:active .theme-toggle-icon {
+  transform: scale(0.9) rotate(6deg);
+}
+
+/* Animation for icon change */
+@keyframes iconPulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+}
+
+.theme-toggle-button:hover .theme-toggle-icon {
+  animation: iconPulse 0.6s ease-in-out;
+}
+
+/* Responsive sizing - match UserDropdown when navbar expands */
+.navbar.expanded .theme-toggle-button {
+  width: 100%;
+  justify-content: center; /* center the icon when navbar is expanded */
+  padding: 0.75rem 1rem;
+  border-radius: 0.75rem;
+}
+
+.navbar.expanded .theme-toggle-icon {
+  margin-right: 0; /* remove left alignment offset */
+}
+
+/* Collapsed state - keep circular */
+.navbar:not(.expanded) .theme-toggle-button {
+  padding: 0.625rem;
+  border-radius: 9999px;
+}
+
+/* Ensure proper z-index */
+.theme-toggle-button {
+  z-index: 10;
+}
+
+/* Focus visible for accessibility */
+.theme-toggle-button:focus-visible {
+  outline: 2px solid var(--primary-color, #3b82f6);
+  outline-offset: 2px;
+}

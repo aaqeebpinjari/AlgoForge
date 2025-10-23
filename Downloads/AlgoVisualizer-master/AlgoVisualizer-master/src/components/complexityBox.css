@@ -1,0 +1,185 @@
+/* Force light mode as default - no media queries */
+.complexity-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 24px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+
+  /* LIGHT MODE - DEFAULT */
+  background: linear-gradient(145deg, #ffffff, #f8fafc);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08),
+    0 0 20px rgba(59, 130, 246, 0.05);
+  color: #1f2937;
+  border: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+.complexity-container:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12),
+    0 0 30px rgba(59, 130, 246, 0.1);
+}
+
+.complexity-title {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: #1f2937;
+}
+
+.complexity-subtitle {
+  text-align: center;
+  font-size: 1rem;
+  margin-bottom: 20px;
+  color: #6b7280;
+}
+
+.dropdown-container {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.dropdown-container select {
+  flex: 1;
+  min-width: 180px;
+  padding: 0.6rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background: #ffffff;
+  border: 1px solid #d1d5db;
+  color: #1f2937;
+}
+
+.dropdown-container select:hover {
+  border-color: #3b82f6;
+  box-shadow: 0 0 8px rgba(59, 130, 246, 0.3);
+}
+
+.dropdown-container select option {
+  background-color: #ffffff;
+  color: #1f2937;
+}
+
+.dropdown-container select option:hover {
+  background-color: #f3f4f6;
+}
+
+.chart-wrapper {
+  margin-top: 10px;
+  border-radius: 16px;
+  padding: 16px;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+}
+
+/* Chart bar effects */
+.recharts-bar-rectangle path {
+  filter: drop-shadow(0px 0px 6px rgba(59, 130, 246, 0.2));
+  transition: all 0.3s ease;
+}
+
+.recharts-bar-rectangle path:hover {
+  filter: drop-shadow(0px 0px 10px rgba(59, 130, 246, 0.4));
+}
+
+/* DARK MODE - Applied when .force-dark class is present */
+.complexity-container.force-dark {
+  background: linear-gradient(145deg, #141824, #1c1f2e);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4),
+    0 0 20px rgba(91, 134, 229, 0.2);
+  color: #e4e6ef;
+  border: 1px solid rgba(45, 55, 72, 0.6);
+}
+
+.complexity-container.force-dark:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6),
+    0 0 30px rgba(91, 134, 229, 0.3);
+}
+
+.complexity-container.force-dark .complexity-title {
+  color: #ffffff;
+}
+
+.complexity-container.force-dark .complexity-subtitle {
+  color: #9ca3af;
+}
+
+.complexity-container.force-dark .dropdown-container select {
+  background: #1f2235;
+  border: 1px solid #2a2d45;
+  color: #e4e6ef;
+}
+
+.complexity-container.force-dark .dropdown-container select:hover {
+  border-color: #5b86e5;
+  box-shadow: 0 0 8px rgba(91, 134, 229, 0.3);
+}
+
+.complexity-container.force-dark .dropdown-container select option {
+  background-color: #1f2937;
+  color: #ffffff;
+}
+
+.complexity-container.force-dark .dropdown-container select option:hover {
+  background-color: #374151;
+}
+
+.complexity-container.force-dark .chart-wrapper {
+  background: #1a1d2b;
+  border: 1px solid #374151;
+}
+
+/* Recharts axis labels and ticks */
+.complexity-container.force-dark .recharts-cartesian-axis-tick text {
+  fill: #9ca3af;
+}
+
+.complexity-container.force-dark .recharts-cartesian-axis-line,
+.complexity-container.force-dark .recharts-cartesian-axis-tick line {
+  stroke: #9ca3af;
+}
+
+.complexity-container.force-dark .recharts-bar-rectangle path {
+  filter: drop-shadow(0px 0px 6px rgba(255, 255, 255, 0.2));
+}
+
+.complexity-container.force-dark .recharts-bar-rectangle path:hover {
+  filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.4));
+}
+/* default (light theme) */
+.complexity-container {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 16px;
+  color: #111827;
+}
+
+/* force dark mode */
+.complexity-container.force-dark {
+  background: #111827;     /* dark background */
+  border-color: #374151;   /* subtle dark border */
+  color: #e5e7eb;          /* readable text */
+}
+
+.complexity-container.force-dark .complexity-title,
+.complexity-container.force-dark .complexity-subtitle {
+  color: #e5e7eb;
+}
+
+.complexity-container.force-dark select {
+  background: #1f2937;
+  color: #f9fafb;
+  border: 1px solid #374151;
+}
+:root[data-theme="dark"] .complexity-container {
+  background: #111827;
+  border-color: #374151;
+  color: #e5e7eb;
+}

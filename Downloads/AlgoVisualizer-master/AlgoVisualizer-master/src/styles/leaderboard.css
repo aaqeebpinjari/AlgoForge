@@ -1,0 +1,64 @@
+/* leader board styles */
+.leaderboard {
+  display: grid;
+  grid-template-columns: 60px 1fr auto; /* rank | profile | stats  */
+  align-items: center;
+  gap: .8rem; 
+}
+.profile {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  align-items: center;
+  gap: 1rem;
+}
+.states {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 1.2rem; 
+  margin-right: 2rem;
+}
+.head-titles{
+  display: grid;
+  grid-template-columns: 60px 1fr auto;
+  align-items: center;
+  justify-content: center;
+  gap: 1.8rem;
+  margin: 0 auto; 
+  padding: 1rem 1.2rem; 
+  border-bottom: 2px solid #444;
+} 
+.head-state{
+  display: grid;
+  grid-auto-flow: column;
+  gap: 4.2rem; 
+  margin-right: 2rem;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.head-state h3{
+  padding: 0 1rem;
+}
+@media (max-width:605px) {
+  .head-state{
+    display: none;
+  } 
+  .leaderboard{
+    grid-template-columns: 60px 1fr;      /* remove the separate stats column */
+    grid-template-rows: auto auto;  
+  }
+  .states{
+     grid-auto-flow: row;
+     justify-self: start;
+     margin-top: 0.5rem;
+     margin-left: 4rem;
+  }
+}
+@media (max-width : 375px) {
+  .states{  
+    margin-left: 2rem;
+  }
+  .view-contributors{
+    font-size: 12px !important;
+    font-weight: 700 !important;
+  }
+}

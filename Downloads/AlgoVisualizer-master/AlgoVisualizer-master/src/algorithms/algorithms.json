@@ -1,0 +1,123 @@
+[
+  {
+    "name": "Bubble Sort",
+    "type": "sorting",
+    "description": "Bubble Sort repeatedly steps through the list, compares adjacent elements, and swaps them if they are in the wrong order. It's known for its simplicity but is inefficient for large datasets.",
+    "useCase": "Commonly used for educational purposes and small datasets where simplicity is preferred over efficiency."
+  },
+  {
+    "name": "Insertion Sort",
+    "type": "sorting",
+    "description": "Insertion Sort builds a sorted array one element at a time by repeatedly taking the next unsorted item and inserting it into its correct position. It performs well with small or nearly sorted datasets.",
+    "useCase": "Often used in hybrid algorithms and for small datasets or online sorting where data is dynamically arriving."
+  },
+  {
+    "name": "Selection Sort",
+    "type": "sorting",
+    "description": "Selection Sort divides the input list into a sorted and an unsorted region, repeatedly selecting the smallest element from the unsorted region and moving it to the sorted region. It has a simple implementation but is inefficient for larger lists.",
+    "useCase": "Best suited for small datasets or educational environments where a straightforward algorithm is needed."
+  },
+  {
+    "name": "Merge Sort",
+    "type": "sorting",
+    "description": "Merge Sort is a divide-and-conquer algorithm that divides the input array in half, recursively sorts the two halves, and then merges them back together. It has a guaranteed time complexity of O(n log n).",
+    "useCase": "Effective for large datasets and for stable sorting, commonly used in external sorting algorithms for data that cannot fit into memory."
+  },
+  {
+    "name": "Quick Sort",
+    "type": "sorting",
+    "description": "Quick Sort selects a pivot and partitions the array into two halves, sorting the elements on either side of the pivot. It is generally faster than other O(n log n) algorithms due to its divide-and-conquer approach.",
+    "useCase": "Widely used for large datasets due to its efficiency, especially when the average performance is more important than the worst-case scenario."
+  },
+  {
+    "name": "Tim Sort",
+    "type": "sorting",
+    "description": "Tim Sort is a hybrid sorting algorithm derived from merge sort and insertion sort. It splits the array into small chunks, sorts them individually, and then merges them efficiently.",
+    "useCase": "It is the default sorting algorithm in Python and Java, optimized for real-world data patterns and partially ordered datasets."
+  },
+  {
+  "name": "Cycle Sort",
+  "type": "sorting",
+  "description": "Cycle Sort is a comparison-based, in-place sorting algorithm that minimizes the number of writes to the array by rotating elements to their correct positions in cycles. It is efficient when write operations are costly but has quadratic time complexity.",
+  "useCase": "Best suited for scenarios where minimizing the number of write operations is critical, such as sorting data in EEPROM or flash memory where write operations are expensive or limited."
+},
+{
+  "name": "Sleep Sort",
+  "type": "sorting",
+  "description": "Sleep Sort is a visualization-based algorithm that delays outputting each number by a time proportional to its value. Elements are 'emitted' after their sleep time, producing a sorted sequence.",
+  "useCase": "Used primarily for fun demonstrations and visualizations. Not practical for real sorting due to its reliance on timing and potential race conditions."
+},
+
+  {
+    "name": "Intro Sort",
+    "type": "sorting",
+    "description": "Intro Sort (Introspective Sort) is a hybrid sorting algorithm that begins with quicksort, switches to heapsort when recursion depth exceeds a certain level, and uses insertion sort for small partitions. This ensures both fast average performance and guaranteed worst-case efficiency.",
+    "useCase": "It is commonly used in C++ Standard Library's std::sort() because it combines the fast performance of quicksort with the reliability of heapsort and the efficiency of insertion sort on small datasets."
+  },
+  {
+  "name": "Cocktail Shaker Sort",
+  "type": "sorting",
+  "description": "Cocktail Shaker Sort is a bidirectional variation of Bubble Sort that alternates between forward and backward passes through the array. This allows it to move both the largest elements to the end and the smallest elements to the beginning in each full iteration, improving performance on certain types of partially sorted data.",
+  "useCase": "Useful for educational visualization of bidirectional sorting. It demonstrates how simple modifications to Bubble Sort can improve performance in specific scenarios, making it popular in sorting visualizers and algorithm teaching tools."
+},
+
+  {
+    "name": "Shell Sort",
+    "type": "sorting",
+    "description": "Shell Sort is an in-place comparison-based sorting algorithm that generalizes insertion sort. It allows the exchange of items that are far apart by comparing and swapping elements at specific intervals (gaps), gradually reducing the gap until it becomes 1, at which point the array is fully sorted using insertion sort.",
+    "useCase": "It is commonly used when insertion sort is too slow for large datasets. Shell sort significantly improves performance on moderately sized arrays, especially when the input data is partially sorted."
+  },
+  {
+    "name": "Linear Search",
+    "type": "searching",
+    "description": "Linear Search sequentially checks each element in the list until the target is found or the list ends.",
+    "useCase": "Good for small or unsorted datasets where a simple implementation is needed."
+  },
+  {
+    "name": "Binary Search",
+    "type": "searching",
+    "description": "Binary Search divides the search interval in half repeatedly until the target is found. Works only on sorted arrays.",
+    "useCase": "Efficient for large sorted datasets."
+  },{
+    "name": "Ternary Search",
+    "type": "searching",
+    "description": "Ternary Search divides the search interval into three parts and discards two-thirds of the elements in each step. Works only on sorted arrays.",
+    "useCase": "Useful for searching in large sorted datasets where dividing into more parts can reduce the number of comparisons."
+},
+  {
+    "name": "Jump Search",
+    "type": "searching",
+    "description": "Jump Search jumps ahead by fixed steps and then performs linear search within the identified block.",
+    "useCase": "Useful when dealing with sorted arrays with fewer lookups."
+  },
+  {
+    "name": "BFS",
+    "type": "graph",
+    "description": "Breadth-First Search explores all neighbors at the present depth before moving to nodes at the next level.",
+    "useCase": "Shortest path in unweighted graphs, level-order traversal."
+  },
+  {
+    "name": "DFS",
+    "type": "graph",
+    "description": "Depth-First Search explores as far as possible along each branch before backtracking.",
+    "useCase": "Pathfinding, cycle detection, and topological sorting."
+  },
+  {
+    "name": "Dijkstra",
+    "type": "graph",
+    "description": "Dijkstra's Algorithm finds the shortest path between nodes in a graph with non-negative edge weights.",
+    "useCase": "Navigation systems, network routing, and weighted shortest path problems."
+  },
+  {
+    "name": "N-Queens",
+    "type": "backtracking",
+    "description": "Solves the N-Queens problem using backtracking. Places N queens on an N×N board so that no two queens attack each other.",
+    "useCase": "Classic backtracking example used to demonstrate constraint satisfaction and recursive search."
+  },
+  {
+  "name": "Bellman-Ford",
+  "type": "graph",
+  "description": "Bellman-Ford Algorithm computes the shortest paths from a single source vertex to all other vertices in a weighted graph, even if the graph contains negative weight edges. It detects negative weight cycles as well.",
+  "useCase": "Useful in graphs with negative weight edges and for detecting negative cycles in network routing and optimization problems."
+}
+]

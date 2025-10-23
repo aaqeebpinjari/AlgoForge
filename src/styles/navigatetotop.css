@@ -1,0 +1,65 @@
+/* 🎯 Legacy styles - keeping for backward compatibility */
+/* 🚀 Modern Back to Top button is now handled in ScrollToTop.jsx component */
+
+#backToTop {
+  /* ⚠️ Legacy implementation - deprecated */
+  display: none !important;
+  /* 🗑️ This selector is no longer in active use */
+}
+
+/* 🎨 Additional utility classes for the new implementation */
+.scroll-indicator {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent 0%, var(--theme-accent, #4f46e5) 50%, transparent 100%);
+  z-index: 1002;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+  /* ✨ Enhanced scroll progress indicator */
+}
+
+.scroll-indicator.visible {
+  transform: scaleX(1);
+  /* 🔥 Active state for scroll progress */
+}
+
+/* 🆕 Enhanced animation utilities */
+@keyframes smoothReveal {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.scroll-reveal {
+  animation: smoothReveal 0.6s ease-out;
+  /* 🎭 Smooth entrance animation for elements */
+}
+
+/* 📱 Responsive enhancement classes */
+@media (max-width: 768px) {
+  .scroll-indicator {
+    height: 2px;
+    /* 📐 Adjusted for mobile viewport */
+  }
+}
+
+/* 🎯 Performance optimization classes */
+.will-change-transform {
+  will-change: transform;
+  /* ⚡ Hint browser for better performance */
+}
+
+/* 🔧 Utility class for smooth transitions */
+.smooth-transition {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  /* 🎪 Enhanced timing function for smoother animations */
+}

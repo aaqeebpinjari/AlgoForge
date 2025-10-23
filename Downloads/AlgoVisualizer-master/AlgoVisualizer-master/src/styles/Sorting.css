@@ -1,0 +1,1066 @@
+@import "./theme.css";
+
+/* =========================
+   Sorting Component Styles
+========================= */
+
+/* Theme Container */
+.theme-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: var(--space-xl);
+}
+
+.theme-title {
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: var(--space-xl);
+  background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 50%, #0ea5e9 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+/* Cards */
+.theme-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-primary);
+  border-radius: var(--radius-xl);
+  padding: var(--space-xl);
+  box-shadow: var(--shadow-md);
+  transition: var(--transition-normal);
+}
+
+.theme-card-header {
+  margin-bottom: var(--space-lg);
+}
+
+.theme-card-header h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+/* Form Elements */
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--space-lg);
+  align-items: end;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.form-label {
+  font-weight: 500;
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+}
+
+.form-control,
+.form-select {
+  width: 100%;
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--radius-md);
+  background: var(--surface-bg);
+  border: 1px solid var(--border-primary);
+  color: var(--text-primary);
+  font-size: 1rem;
+  transition: var(--transition-fast);
+}
+
+.form-control:focus,
+.form-select:focus {
+  outline: none;
+  border-color: var(--border-accent);
+  box-shadow: 0 0 0 3px var(--accent-light);
+}
+
+.form-range {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 8px;
+  background: var(--border-primary);
+  border-radius: var(--radius-md);
+  outline: none;
+  transition: var(--transition-fast);
+}
+
+.form-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background: var(--accent-primary);
+  cursor: pointer;
+  border-radius: 50%;
+  border: 3px solid var(--card-bg);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Buttons */
+.btn {
+  padding: var(--space-sm) var(--space-lg);
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-xs);
+  transition: var(--transition-fast);
+  border: 1px solid transparent;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+.btn-primary {
+  background: var(--button-primary-bg);
+  color: var(--button-primary-text);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: var(--button-primary-hover);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-secondary {
+  background: var(--button-secondary-bg);
+  color: var(--button-secondary-text);
+  border-color: var(--border-primary);
+}
+
+.btn-secondary:hover:not(:disabled) {
+  background: var(--button-secondary-hover);
+  transform: translateY(-1px);
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Visualization Area */
+.visualization-area {
+  min-height: 400px;
+  padding: var(--space-xl);
+  background: var(--surface-bg);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-primary);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin: var(--space-xl) 0;
+}
+
+.array-bar {
+  background-color: var(--accent-primary);
+  color: var(--surface-bg);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 1px;
+  border-radius: var(--radius-sm) var(--radius-sm) 0 0;
+  transition: height 0.3s ease, background-color 0.3s ease;
+  font-weight: 600;
+  padding: var(--space-xs) var(--space-xs);
+  box-shadow: var(--shadow-sm);
+  min-width: 8px;
+}
+
+/* Statistics */
+.stats-section {
+  margin: var(--space-xl) 0;
+}
+
+.stats-grid {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: var(--space-md);
+}
+
+.stat-card {
+  height: 190px;
+  width: 150px;
+  padding: var(--space-lg);
+  border-radius: var(--radius-lg);
+  text-align: center;
+  background: var(--surface-bg);
+  border: 1px solid var(--border-primary);
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: var(--space-xs);
+  color: var(--text-secondary);
+}
+
+.stat-value {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+/* Complexity Grid */
+.complexity-grid {
+  margin-top: var(--space-lg);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--space-md);
+}
+
+.complexity-item {
+  background: var(--surface-bg);
+  padding: var(--space-md);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-primary);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.complexity-label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.complexity-value {
+  font-family: "Courier New", monospace;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+/* Code Explanation Button */
+.code-explanation-btn {
+  background: var(--accent-light);
+  color: var(--accent-primary);
+  border: 1px solid var(--border-accent);
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--radius-md);
+  text-align: center;
+  min-width: fit-content !important;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.code-explanation-btn:hover {
+  background: var(--button-secondary-hover);
+  transform: translateY(-1px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .theme-container {
+    padding: var(--space-md);
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stats-grid {
+    grid-auto-flow: row;
+    grid-template-columns: 1fr;
+  }
+
+  .complexity-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---- Sorting page layout polish ---- */
+.sorting-grid {
+  display: grid;
+  grid-template-columns: minmax(320px, 1.1fr) minmax(520px, 1.9fr);
+  gap: 1.25rem;
+  align-items: start;
+}
+
+.sorting-left,
+.sorting-right {
+  width: 100%;
+}
+
+.theme-card-header.no-border {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.theme-card-header.between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.code-like {
+  background: var(--surface-bg);
+  border-radius: 8px;
+  padding: 1rem;
+  color: var(--text-secondary);
+  overflow-x: auto;
+  font-family: monospace;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+/* keep the canvas visually aligned with cards */
+.viz-canvas {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 420px; /* consistent visual height */
+  padding: 0.75rem 0.5rem; /* matches card inner padding */
+  border-radius: 8px;
+  background: var(--surface-bg);
+}
+
+/* tighter spacing for form rows inside cards */
+.form-grid.tight-grid {
+  row-gap: 0.75rem;
+}
+
+.form-group.span-2 {
+  grid-column: span 2;
+}
+
+.row-actions {
+  margin-top: 0.75rem;
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+/* inline error styling */
+.inline-error {
+  color: var(--accent-danger);
+  text-align: left;
+  margin-top: 0.75rem;
+}
+
+/* subtle status message alignment */
+.status-message {
+  text-align: left;
+  color: var(--accent-primary);
+  font-weight: 600;
+  margin: 0.75rem 0 0.25rem;
+}
+
+/* responsive: stack on tablets/phones */
+@media (max-width: 1024px) {
+  .sorting-grid {
+    grid-template-columns: 1fr;
+  }
+  .viz-canvas {
+    height: 360px;
+  }
+
+  /* Fix for mobile layout */
+  .sorting-right {
+    order: -1; /* Show visualization first on mobile */
+  }
+
+  .form-group.span-2 {
+    grid-column: span 1;
+  }
+
+  .stats-grid.compact {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ---------- Base + reset ---------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --page-max: 1200px;
+  --gap: 24px;
+  --gap-sm: 12px;
+}
+
+body {
+  color: var(--text-primary);
+}
+
+/* ---------- Page layout ---------- */
+.theme-container {
+  max-width: var(--page-max);
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.theme-title {
+  margin: 0 0 20px 0;
+  background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 50%, #0ea5e9 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Two-column grid: left = content cards, right = visualization */
+.sorting-grid {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr; /* laptop/desktop split */
+  align-items: start; /* TOP align both columns */
+  gap: var(--gap);
+}
+
+/* Left column contains only cards, laid out in a neat vertical stack */
+.sorting-left {
+  display: grid;
+  gap: var(--gap);
+}
+
+/* Right column is just one big card (viz) */
+.sorting-right {
+  position: sticky;
+  top: 20px; /* keeps the viz visible while scrolling on wide screens */
+  align-self: start;
+}
+
+/* ---------- Cards ---------- */
+.theme-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-sm);
+}
+
+.theme-card-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+}
+
+.theme-card-header.no-border {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.theme-card-header.between {
+  justify-content: space-between;
+}
+
+/* ---------- Forms & controls ---------- */
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--gap);
+}
+
+.form-grid.tight-grid {
+  gap: var(--gap-sm);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group.span-2 {
+  grid-column: span 2;
+}
+
+.form-label {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.form-select,
+.form-control,
+.form-range {
+  width: 100%;
+}
+
+.form-control,
+.form-select {
+  background: #0c1118;
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 12px;
+  outline: none;
+}
+
+.form-control::placeholder {
+  color: #6f7b88;
+}
+
+.form-range {
+  accent-color: var(--accent);
+}
+
+.row-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.btn {
+  border: 1px solid var(--border);
+  background: #121924;
+  color: var(--text);
+  border-radius: 8px;
+  padding: 10px 12px;
+  cursor: pointer;
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn-primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #06101d;
+  font-weight: 600;
+}
+
+/* ---------- Viz ---------- */
+.viz-canvas {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height: 320px; /* matches your JS math (max 280 + padding) */
+  padding: 12px;
+  border: 1px dashed var(--border);
+  border-radius: 10px;
+  overflow: hidden; /* keeps bars inside */
+  background: var(--surface-bg);
+}
+
+/* ---------- Stats / Complexity grids ---------- */
+.stats-grid,
+.complexity-grid {
+  display: grid;
+  gap: var(--gap-sm);
+}
+
+.stats-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.complexity-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.stat-card,
+.complexity-item {
+  background: #0c1118;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 12px;
+}
+
+.stat-label,
+.complexity-label {
+  font-size: 0.8rem;
+  color: var(--muted);
+  display: block;
+  margin-bottom: 4px;
+}
+
+.stat-value,
+.complexity-value {
+  font-weight: 700;
+}
+
+/* ---------- Code-like blocks & messages ---------- */
+.code-like {
+  background: #0c1118;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 12px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.inline-error {
+  color: #ff6b6b;
+  background: #2a1212;
+  border: 1px solid #5a1f1f;
+  border-radius: 8px;
+  padding: 8px 10px;
+  margin-top: 6px;
+}
+
+.status-message {
+  background: #0c1118;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 12px;
+  color: var(--text);
+}
+
+/* ---------- Export block spacing ---------- */
+#sort-visualization-container .theme-card-header.no-border h3,
+.theme-card-header.no-border h3 {
+  margin: 0;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1200px) {
+  .sorting-grid {
+    grid-template-columns: 1.4fr 1fr;
+  }
+}
+
+@media (max-width: 1024px) {
+  .sorting-grid {
+    grid-template-columns: 1fr; /* stack on tablet/phone */
+  }
+
+  .sorting-right {
+    position: static; /* no sticky on small screens */
+    order: -1; /* show viz first on mobile (optional) */
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr; /* controls stack vertically */
+  }
+
+  .form-group.span-2 {
+    grid-column: span 1;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .complexity-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* ---------- Base + reset ---------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  color: var(--text-primary);
+}
+
+/* ---------- Page layout ---------- */
+.theme-container {
+  max-width: var(--page-max);
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.theme-title {
+  margin: 0 0 20px 0;
+  background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 50%, #0ea5e9 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Two-column grid: left = content cards, right = visualization */
+.sorting-grid {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr; /* laptop/desktop split */
+  align-items: start; /* TOP align both columns */
+  gap: var(--gap);
+}
+
+/* Left column contains only cards, laid out in a neat vertical stack */
+.sorting-left {
+  display: grid;
+  gap: var(--gap);
+}
+
+/* Right column stacks viz + compact stats */
+.sorting-right {
+  display: grid;
+  gap: var(--gap);
+  position: sticky;
+  top: 76px; /* sit below your navbar; tweak to match your header height */
+  align-self: start;
+  z-index: 1;
+}
+
+/* ---------- Cards ---------- */
+.theme-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-sm);
+}
+
+.theme-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+}
+
+.theme-card-header.no-border {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.theme-card-header.between {
+  justify-content: space-between;
+}
+
+/* stronger, crisper headers (fixes low-contrast "Visualization") */
+.theme-card-header h3 {
+  color: var(--text);
+  font-weight: 750;
+  letter-spacing: 0.2px;
+  margin: 0;
+}
+
+.viz-header {
+  margin-bottom: 2px;
+}
+
+/* ---------- Forms & controls ---------- */
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--gap);
+}
+
+.form-grid.tight-grid {
+  gap: var(--gap-sm);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group.span-2 {
+  grid-column: span 2;
+}
+
+.form-label {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.form-select,
+.form-control,
+.form-range {
+  width: 100%;
+}
+
+.form-control,
+.form-select {
+  background: #0c1118;
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 12px;
+  outline: none;
+}
+
+.form-control::placeholder {
+  color: #6f7b88;
+}
+
+.form-range {
+  accent-color: var(--accent);
+}
+
+.row-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.btn {
+  border: 1px solid var(--border);
+  background: #121924;
+  color: var(--text);
+  border-radius: 8px;
+  padding: 10px 12px;
+  cursor: pointer;
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn-primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #06101d;
+  font-weight: 600;
+}
+
+/* ---------- Viz ---------- */
+.viz-canvas {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height: 320px; /* matches JS math (max 280 + padding) */
+  padding: 12px;
+  border: 1px dashed var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+  background: #0c1118;
+}
+
+/* ---------- Stats / Complexity grids ---------- */
+.stats-grid,
+.complexity-grid {
+  display: grid;
+  gap: var(--gap-sm);
+}
+
+.stats-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.stats-grid.compact {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.compact-card .stat-card {
+  padding: 10px;
+}
+
+.compact-card .stat-label {
+  font-size: 0.78rem;
+}
+
+.compact-card .stat-value {
+  font-size: 1.05rem;
+  font-weight: 800;
+}
+
+.complexity-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.stat-card,
+.complexity-item {
+  background: #0c1118;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 12px;
+}
+
+.stat-label,
+.complexity-label {
+  font-size: 0.8rem;
+  color: var(--muted);
+  display: block;
+  margin-bottom: 4px;
+}
+
+.stat-value,
+.complexity-value {
+  font-weight: 700;
+}
+
+/* ---------- Code-like blocks & messages ---------- */
+.code-like {
+  background: #0c1118;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 12px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.inline-error {
+  color: #ff6b6b;
+  background: #2a1212;
+  border: 1px solid #5a1f1f;
+  border-radius: 8px;
+  padding: 8px 10px;
+  margin-top: 6px;
+}
+
+.status-message {
+  background: #0c1118;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 12px;
+  color: var(--text);
+}
+
+/* ---------- Export block spacing ---------- */
+#sort-visualization-container .theme-card-header.no-border h3,
+.theme-card-header.no-border h3 {
+  margin: 0;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1200px) {
+  .sorting-grid {
+    grid-template-columns: 1.4fr 1fr;
+  }
+}
+
+@media (max-width: 1024px) {
+  .sorting-grid {
+    grid-template-columns: 1fr; /* stack on tablet/phone */
+  }
+
+  .sorting-right {
+    position: static; /* no sticky on small screens */
+    top: auto;
+    order: -1; /* show viz first on mobile (optional) */
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr; /* controls stack vertically */
+  }
+
+  .form-group.span-2 {
+    grid-column: span 1;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .complexity-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Fix for mobile layout */
+  .stats-grid.compact {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .compact-card .stat-card {
+    padding: 8px;
+  }
+}
+
+.compact-card {
+  max-height: 180px; /* adjust as you like */
+  overflow-y: auto; /* adds scrollbar if content overflows */
+}
+
+/* --- Fix dark box + dark text and ensure good contrast --- */
+.code-like {
+  background: #0c1118; /* or var(--surface-bg) */
+  color: var(--text); /* <<< readable text */
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 12px;
+}
+
+.code-like strong {
+  color: var(--text);
+}
+
+/* Light theme safety */
+:root[data-theme="light"] .code-like {
+  background: #f9fafb;
+  color: #111827;
+  border-color: #e5e7eb;
+}
+
+/* Make the card header always readable */
+.theme-card-header h3 {
+  color: var(--text);
+}
+
+/* Improved responsive design for small screens */
+@media (max-width: 768px) {
+  .sorting-grid {
+    gap: 1rem;
+  }
+
+  .theme-container {
+    padding: 1rem;
+  }
+
+  .theme-card {
+    padding: 1rem;
+  }
+
+  .form-grid {
+    gap: 0.75rem;
+  }
+
+  .row-actions {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .stats-grid.compact {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .complexity-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stats-grid.compact {
+    grid-template-columns: 1fr;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+}

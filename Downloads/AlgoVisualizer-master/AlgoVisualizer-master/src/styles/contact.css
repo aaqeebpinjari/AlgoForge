@@ -1,0 +1,563 @@
+/* =========================
+   Light/Dark Mode Variables
+========================= */
+:root {
+    --bg-color: #f6f0d6;
+    --text-color: #1a1a1a;
+    --accent-color: rgb(8, 179, 231);
+    --input-bg1: #ffffff;
+    --input-text: #1a1a1a;
+    --btn-bg: rgb(8, 179, 231);
+    --btn-text: #ffffff;
+    --btn-hover-bg: rgb(6, 150, 190);
+    --card-bg: rgba(255, 255, 255, 0.9);
+    --shadow-color: rgba(8, 179, 231, 0.1);
+    --gradient-start: rgb(8, 179, 231);
+    --gradient-end: rgb(6, 150, 190);
+    --section-bg: rgba(255, 255, 255, 0.05);
+    --border-color: rgba(8, 179, 231, 0.2);
+    --error-bg: rgba(239, 68, 68, 0.1);
+    --error-border: rgba(239, 68, 68, 0.3);
+    --error-text: #dc2626;
+    --success-start: #10b981;
+    --success-end: #059669;
+}
+
+[data-theme="dark"] {
+    --bg-color: #0a0a1a;
+    --text-color: #e0e6ed;
+    --accent-color: rgb(8, 179, 231);
+    --input-bg1: #1a1a1a;
+    --input-text: #e0e6ed;
+    --btn-bg: rgb(8, 179, 231);
+    --btn-text: #ffffff;
+    --btn-hover-bg: rgb(6, 150, 190);
+    --card-bg: rgba(26, 26, 26, 0.9);
+    --shadow-color: rgba(8, 179, 231, 0.2);
+    --gradient-start: rgb(8, 179, 231);
+    --gradient-end: rgb(6, 150, 190);
+    --section-bg: rgba(255, 255, 255, 0.02);
+    --border-color: rgba(8, 179, 231, 0.2);
+    --error-bg: rgba(239, 68, 68, 0.1);
+    --error-border: rgba(239, 68, 68, 0.3);
+    --error-text: #fca5a5;
+    --success-start: #10b981;
+    --success-end: #059669;
+}
+
+/* =========================
+   Base Styles
+========================= */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* =========================
+   Contact Container
+========================= */
+.contact {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    overflow-x: hidden;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 100px;
+}
+
+/* =========================
+   Form Section
+========================= */
+.form-section {
+    margin-bottom: 80px;
+    width: 100%;
+    max-width: 900px;
+}
+
+.form-container {
+    background: var(--card-bg);
+    backdrop-filter: blur(15px);
+    border-radius: 25px;
+    padding: 60px 50px;
+    box-shadow: 0 15px 60px var(--shadow-color);
+    border: 1px solid rgba(8, 179, 231, 0.15);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.form-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
+    animation: pulse-border 2s ease-in-out infinite;
+}
+
+.form-container:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 70px var(--shadow-color);
+}
+
+.form-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.form-header h1,
+.form-header h2 {
+    font-size: 2.5rem;
+    margin: 0 0 20px 0;
+    color: var(--accent-color);
+    font-weight: 700;
+}
+
+.form-header p {
+    font-size: 1.2rem;
+    opacity: 0.8;
+    margin: 0;
+    line-height: 1.6;
+    max-width: 500px;
+    margin: 0 auto;
+    color: var(--text-color);
+}
+
+.contact-form {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.input-group.full-width {
+    grid-column: 1 / -1;
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--accent-color);
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.required {
+    color: #f87171;
+    margin-left: 4px;
+}
+
+.input-group input,
+.input-group textarea {
+    padding: 18px 24px;
+    border: 2px solid var(--border-color);
+    background: var(--input-bg1);
+    color: var(--input-text);
+    border-radius: 15px;
+    font-size: 1.1rem;
+    font-family: inherit;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 20px rgba(8, 179, 231, 0.08);
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 4px rgba(8, 179, 231, 0.15), 0 8px 30px rgba(8, 179, 231, 0.2);
+    transform: translateY(-3px);
+}
+
+.input-group input::placeholder,
+.input-group textarea::placeholder {
+    opacity: 0.6;
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+.input-group textarea {
+    resize: vertical;
+    min-height: 140px;
+    max-height: 300px;
+    line-height: 1.6;
+}
+
+/* Submit Button */
+.submit-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 40px;
+    padding-top: 20px;
+}
+
+.submit-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 18px 35px;
+    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 10px 30px rgba(8, 179, 231, 0.3);
+    min-width: 240px;
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.submit-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.submit-btn:hover:not(:disabled) {
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 15px 40px rgba(8, 179, 231, 0.4);
+}
+
+.submit-btn:hover:not(:disabled)::before {
+    left: 100%;
+}
+
+.submit-btn:active:not(:disabled) {
+    transform: translateY(-2px) scale(1.02);
+}
+
+.submit-btn:disabled {
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+.submit-btn.success {
+    background: linear-gradient(135deg, var(--success-start), var(--success-end));
+    box-shadow: 0 10px 30px rgba(16, 185, 129, 0.3);
+}
+
+.submit-btn svg {
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+}
+
+.submit-btn:hover:not(:disabled) svg {
+    transform: translateX(4px);
+}
+
+/* Form Error */
+.form-error {
+    margin-top: 1rem;
+    padding: 0.75rem 1.25rem;
+    background: var(--error-bg);
+    border: 1px solid var(--error-border);
+    border-radius: 12px;
+    color: var(--error-text);
+    font-size: 0.95rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+/* =========================
+   Social Section
+========================= */
+.social-section {
+    margin-bottom: 80px;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.social-container {
+    text-align: center;
+}
+
+.social-container h2,
+.social-container h4 {
+    font-size: 2.5rem;
+    margin: 0 0 50px 0;
+    color: var(--accent-color);
+    font-weight: 700;
+}
+
+.social-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.social-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 30px 25px;
+    background: var(--card-bg);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    text-decoration: none;
+    color: var(--text-color);
+    border: 1px solid rgba(8, 179, 231, 0.15);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 8px 25px var(--shadow-color);
+    position: relative;
+    overflow: hidden;
+}
+
+.social-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(8, 179, 231, 0.05), transparent);
+    transition: left 0.5s;
+}
+
+.social-card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 20px 50px var(--shadow-color);
+}
+
+.social-card:hover::before {
+    left: 100%;
+}
+
+.social-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    color: white;
+    flex-shrink: 0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.github .social-icon { background: linear-gradient(135deg, #333, #555); }
+.linkedin .social-icon { background: linear-gradient(135deg, #0077b5, #00a0dc); }
+.twitter .social-icon { background: linear-gradient(135deg, #1da1f2, #4fc3f7); }
+.email .social-icon { background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)); }
+
+.social-info {
+    text-align: left;
+    flex: 1;
+}
+
+.social-info h3,
+.social-info h5 {
+    margin: 0 0 8px 0;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.social-info span {
+    font-size: 1rem;
+    opacity: 0.75;
+    font-weight: 400;
+    color: var(--text-color);
+}
+
+.response-note {
+    background: linear-gradient(135deg, rgba(8, 179, 231, 0.1), rgba(6, 150, 190, 0.1));
+    border-radius: 20px;
+    padding: 35px;
+    border-left: 5px solid var(--accent-color);
+    box-shadow: 0 8px 25px rgba(8, 179, 231, 0.1);
+}
+
+.response-note p {
+    margin: 0;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    font-weight: 400;
+    color: var(--text-color);
+}
+
+.response-note strong {
+    color: var(--accent-color);
+    font-weight: 600;
+}
+
+/* =========================
+   Chatbot Section
+========================= */
+.chatbot-section {
+    margin-bottom: 60px;
+    width: 100%;
+}
+
+/* =========================
+   Animations
+========================= */
+@keyframes pulse-border {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; }
+}
+
+@keyframes shimmer {
+    0% { filter: hue-rotate(0deg) brightness(1); }
+    100% { filter: hue-rotate(15deg) brightness(1.1); }
+}
+
+/* =========================
+   Responsive Design
+========================= */
+@media (max-width: 968px) {
+    .contact {
+        padding: 80px 15px 0;
+    }
+    
+    .form-container {
+        padding: 40px 30px;
+    }
+    
+    .social-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact {
+        padding-top: 80px;
+    }
+    
+    .form-container {
+        padding: 35px 25px;
+        border-radius: 20px;
+    }
+    
+    .form-header h1,
+    .form-header h2 {
+        font-size: 2rem;
+    }
+    
+    .form-header p {
+        font-size: 1rem;
+    }
+    
+    .form-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    
+    .social-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .social-card {
+        padding: 25px 20px;
+    }
+    
+    .social-container h2,
+    .social-container h4 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact {
+        padding: 70px 10px 0;
+    }
+    
+    .form-container {
+        padding: 30px 20px;
+    }
+    
+    .form-header h1,
+    .form-header h2 {
+        font-size: 1.8rem;
+    }
+    
+    .form-header p {
+        font-size: 1rem;
+    }
+    
+    .input-group input,
+    .input-group textarea {
+        padding: 15px 20px;
+        font-size: 1rem;
+    }
+    
+    .submit-btn {
+        padding: 15px 35px;
+        font-size: 1.1rem;
+        min-width: 180px;
+        width: 100%;
+    }
+    
+    .social-container h2,
+    .social-container h4 {
+        font-size: 1.8rem;
+        margin-bottom: 30px;
+    }
+    
+    .social-card {
+        padding: 20px 15px;
+        gap: 15px;
+    }
+    
+    .social-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+    }
+    
+    .response-note {
+        padding: 25px 20px;
+    }
+}
+
+/* =========================
+   Accessibility
+========================= */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}

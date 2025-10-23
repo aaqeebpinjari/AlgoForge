@@ -1,0 +1,73 @@
+[
+  {
+    "id": 1,
+    "title": "Understanding Big O Notation: A Comprehensive Guide",
+    "description": "Dive deep into algorithmic complexity analysis and learn how to evaluate the efficiency of your algorithms with practical examples.",
+    "author": "Algorithm Expert",
+    "date": "2024-01-15",
+    "readTime": "8 min read",
+    "category": "Theory",
+    "tags": ["Big O", "Algorithms", "Complexity"],
+    "featured": true
+  },
+  {
+    "id": 2,
+    "title": "Visualizing Sorting Algorithms: From Bubble to Quick Sort",
+    "description": "Explore the fascinating world of sorting algorithms through interactive visualizations and understand their trade-offs.",
+    "author": "Sorting Specialist",
+    "date": "2024-01-12",
+    "readTime": "12 min read",
+    "category": "Sorting",
+    "tags": ["Sorting", "Visualization", "Algorithms"],
+    "featured": false,
+    "image": "/src/assets/blog/placeholder.svg"
+  },
+  {
+    "id": 3,
+    "title": "Graph Algorithms in Real-World Applications",
+    "description": "Discover how graph algorithms power modern applications like social networks, GPS navigation, and recommendation systems.",
+    "author": "Graph Guru",
+    "date": "2024-01-10",
+    "readTime": "10 min read",
+    "category": "Graphs",
+    "tags": ["Graphs", "Applications", "Real-world"],
+    "featured": true,
+    "link": "https://example.com/graph-algorithms"
+  },
+  {
+    "id": 4,
+    "title": "Data Structures Mastery: Trees, Heaps, and Hash Tables",
+    "description": "Master the essential data structures that form the backbone of efficient algorithms and software systems.",
+    "author": "Data Structure Pro",
+    "date": "2024-01-08",
+    "readTime": "15 min read",
+    "category": "Data Structures",
+    "tags": ["Trees", "Heaps", "Hash Tables"],
+    "featured": false,
+    "image": "/src/assets/blog/placeholder.svg",
+    "link": "https://example.com/data-structures"
+  },
+  {
+    "id": 5,
+    "title": "Search Algorithms: Beyond Linear and Binary Search",
+    "description": "Explore advanced search techniques including interpolation search, exponential search, and more.",
+    "author": "Search Expert",
+    "date": "2024-01-05",
+    "readTime": "7 min read",
+    "category": "Search",
+    "tags": ["Search", "Binary Search", "Advanced"],
+    "featured": false
+  },
+  {
+    "id": 6,
+    "title": "Algorithm Optimization Techniques and Best Practices",
+    "description": "Learn practical techniques to optimize your algorithms for better performance and efficiency.",
+    "author": "Performance Expert",
+    "date": "2024-01-03",
+    "readTime": "11 min read",
+    "category": "Optimization",
+    "tags": ["Optimization", "Performance", "Best Practices"],
+    "featured": false,
+    "image": "/src/assets/blog/placeholder.svg"
+  }
+]

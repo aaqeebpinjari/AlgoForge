@@ -1,0 +1,22 @@
+[
+  {
+    "question": "Which command creates a new branch?",
+    "options": [
+      { "text": "git branch <branch-name>", "isCorrect": true },
+      { "text": "git checkout <branch-name>", "isCorrect": false },
+      { "text": "git merge <branch-name>", "isCorrect": false },
+      { "text": "git init", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "What does git pull do?",
+    "options": [
+      { "text": "Pushes local commits to remote", "isCorrect": false },
+      { "text": "Fetches and merges changes from remote", "isCorrect": true },
+      { "text": "Deletes a branch", "isCorrect": false },
+      { "text": "Stashes changes", "isCorrect": false }
+    ]
+  }
+
+
+]

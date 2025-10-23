@@ -1,0 +1,865 @@
+# Comprehensive cheatsheet data for all algorithms and data structures
+
+sorting:
+  title: "Sorting Algorithms"
+  icon: "🔄"
+  color: "#FF6B6B"
+  algorithms:
+    - name: "Bubble Sort"
+      timeComplexity:
+        best: "O(n)"
+        average: "O(n²)"
+        worst: "O(n²)"
+      spaceComplexity: "O(1)"
+      stable: true
+      inPlace: true
+      description: "Repeatedly steps through the list, compares adjacent elements and swaps them if they are in wrong order."
+      useCases:
+        - "Small datasets"
+        - "Educational purposes"
+        - "Nearly sorted data"
+      pros:
+        - "Simple to understand"
+        - "Easy to implement"
+        - "Stable sort"
+      cons:
+        - "Very slow for large datasets"
+        - "Many unnecessary comparisons"
+
+    - name: "Insertion Sort"
+      timeComplexity:
+        best: "O(n)"
+        average: "O(n²)"
+        worst: "O(n²)"
+      spaceComplexity: "O(1)"
+      stable: true
+      inPlace: true
+      description: "Builds the final sorted array one item at a time by inserting each element into its proper position."
+      useCases:
+        - "Small datasets"
+        - "Nearly sorted data"
+        - "Online sorting"
+      pros:
+        - "Efficient for small data"
+        - "Adaptive"
+        - "Stable"
+        - "In-place"
+      cons:
+        - "Inefficient for large datasets"
+        - "Quadratic time complexity"
+
+    - name: "Selection Sort"
+      timeComplexity:
+        best: "O(n²)"
+        average: "O(n²)"
+        worst: "O(n²)"
+      spaceComplexity: "O(1)"
+      stable: false
+      inPlace: true
+      description: "Finds the minimum element from unsorted part and puts it at the beginning."
+      useCases:
+        - "Small datasets"
+        - "Memory write is costly operation"
+      pros:
+        - "Simple implementation"
+        - "Minimum number of swaps"
+      cons:
+        - "Inefficient for large lists"
+        - "Not stable"
+
+    - name: "Merge Sort"
+      timeComplexity:
+        best: "O(n log n)"
+        average: "O(n log n)"
+        worst: "O(n log n)"
+      spaceComplexity: "O(n)"
+      stable: true
+      inPlace: false
+      description: "Divide and conquer algorithm that divides input array into two halves, recursively sorts them, and merges."
+      useCases:
+        - "Large datasets"
+        - "External sorting"
+        - "Linked lists"
+      pros:
+        - "Guaranteed O(n log n)"
+        - "Stable"
+        - "Parallelizable"
+      cons:
+        - "Requires extra space"
+        - "Slower for small datasets"
+
+    - name: "Quick Sort"
+      timeComplexity:
+        best: "O(n log n)"
+        average: "O(n log n)"
+        worst: "O(n²)"
+      spaceComplexity: "O(log n)"
+      stable: false
+      inPlace: true
+      description: "Picks a pivot element and partitions array around it, recursively sorting sub-arrays."
+      useCases:
+        - "Large datasets"
+        - "General purpose sorting"
+        - "In-memory sorting"
+      pros:
+        - "Very fast in practice"
+        - "In-place"
+        - "Cache-friendly"
+      cons:
+        - "Not stable"
+        - "Worst case O(n²)"
+        - "Recursive"
+
+    - name: "Heap Sort"
+      timeComplexity:
+        best: "O(n log n)"
+        average: "O(n log n)"
+        worst: "O(n log n)"
+      spaceComplexity: "O(1)"
+      stable: false
+      inPlace: true
+      description: "Uses binary heap data structure to sort elements."
+      useCases:
+        - "When guaranteed O(n log n) needed"
+        - "Priority queue"
+      pros:
+        - "Guaranteed O(n log n)"
+        - "In-place"
+        - "No worst case"
+      cons:
+        - "Not stable"
+        - "Not cache-friendly"
+        - "Slower than Quick Sort"
+
+    - name: "Tim Sort"
+      timeComplexity:
+        best: "O(n)"
+        average: "O(n log n)"
+        worst: "O(n log n)"
+      spaceComplexity: "O(n)"
+      stable: true
+      inPlace: false
+      description: "Hybrid sorting algorithm combining merge sort and insertion sort."
+      useCases:
+        - "Python's built-in sort"
+        - "Java's Arrays.sort"
+        - "Real-world data"
+      pros:
+        - "Very fast on real data"
+        - "Stable"
+        - "Adaptive"
+      cons:
+        - "Complex implementation"
+        - "Requires extra space"
+
+    - name: "Radix Sort"
+      timeComplexity:
+        best: "O(nk)"
+        average: "O(nk)"
+        worst: "O(nk)"
+      spaceComplexity: "O(n + k)"
+      stable: true
+      inPlace: false
+      description: "Non-comparative sorting algorithm that sorts integers by processing digits."
+      useCases:
+        - "Integer sorting"
+        - "Fixed-length strings"
+        - "Large numbers"
+      pros:
+        - "Linear time for integers"
+        - "Stable"
+      cons:
+        - "Only for integers/strings"
+        - "Requires extra space"
+
+    - name: "Bucket Sort"
+      timeComplexity:
+        best: "O(n + k)"
+        average: "O(n + k)"
+        worst: "O(n²)"
+      spaceComplexity: "O(n + k)"
+      stable: true
+      inPlace: false
+      description: "Distributes elements into buckets, then sorts each bucket."
+      useCases:
+        - "Uniformly distributed data"
+        - "Floating point numbers"
+      pros:
+        - "Fast for uniform data"
+        - "Stable"
+      cons:
+        - "Requires knowledge of data distribution"
+        - "Extra space"
+
+    - name: "Shell Sort"
+      timeComplexity:
+        best: "O(n log n)"
+        average: "O(n log² n)"
+        worst: "O(n²)"
+      spaceComplexity: "O(1)"
+      stable: false
+      inPlace: true
+      description: "Generalized insertion sort that allows exchange of far items."
+      useCases:
+        - "Medium-sized arrays"
+        - "When space is limited"
+      pros:
+        - "Better than insertion sort"
+        - "In-place"
+      cons:
+        - "Not stable"
+        - "Complex analysis"
+
+    - name: "Cycle Sort"
+      timeComplexity:
+        best: "O(n²)"
+        average: "O(n²)"
+        worst: "O(n²)"
+      spaceComplexity: "O(1)"
+      stable: false
+      inPlace: true
+      description: "In-place sorting that minimizes the number of writes to memory."
+      useCases:
+        - "Expensive write operations"
+        - "EEPROM/Flash memory"
+      pros:
+        - "Minimum writes"
+        - "In-place"
+      cons:
+        - "Slow"
+        - "Complex implementation"
+
+    - name: "Intro Sort"
+      timeComplexity:
+        best: "O(n log n)"
+        average: "O(n log n)"
+        worst: "O(n log n)"
+      spaceComplexity: "O(log n)"
+      stable: false
+      inPlace: true
+      description: "Hybrid of quicksort, heapsort, and insertion sort."
+      useCases:
+        - "C++ std::sort"
+        - "General purpose sorting"
+      pros:
+        - "Guaranteed O(n log n)"
+        - "Fast in practice"
+      cons:
+        - "Complex implementation"
+        - "Not stable"
+
+    - name: "Cocktail Shaker Sort"
+      timeComplexity:
+        best: "O(n)"
+        average: "O(n²)"
+        worst: "O(n²)"
+      spaceComplexity: "O(1)"
+      stable: true
+      inPlace: true
+      description: "Bidirectional bubble sort that traverses in both directions."
+      useCases:
+        - "Educational purposes"
+        - "Small datasets"
+      pros:
+        - "Slightly better than bubble sort"
+        - "Simple"
+      cons:
+        - "Still inefficient"
+        - "Rarely used in practice"
+
+searching:
+  title: "Searching Algorithms"
+  icon: "🔍"
+  color: "#4ECDC4"
+  algorithms:
+    - name: "Linear Search"
+      timeComplexity:
+        best: "O(1)"
+        average: "O(n)"
+        worst: "O(n)"
+      spaceComplexity: "O(1)"
+      description: "Sequentially checks each element until target is found or list ends."
+      useCases:
+        - "Unsorted data"
+        - "Small datasets"
+        - "Linked lists"
+      pros:
+        - "Works on unsorted data"
+        - "Simple"
+        - "No preprocessing"
+      cons:
+        - "Slow for large datasets"
+        - "Linear time"
+
+    - name: "Binary Search"
+      timeComplexity:
+        best: "O(1)"
+        average: "O(log n)"
+        worst: "O(log n)"
+      spaceComplexity: "O(1)"
+      description: "Divides search interval in half repeatedly. Requires sorted array."
+      useCases:
+        - "Large sorted datasets"
+        - "Dictionary lookups"
+      pros:
+        - "Very fast"
+        - "Logarithmic time"
+      cons:
+        - "Requires sorted data"
+        - "Random access needed"
+
+    - name: "Ternary Search"
+      timeComplexity:
+        best: "O(1)"
+        average: "O(log₃ n)"
+        worst: "O(log₃ n)"
+      spaceComplexity: "O(1)"
+      description: "Divides array into three parts and determines which section contains target."
+      useCases:
+        - "Unimodal functions"
+        - "Finding maximum/minimum"
+      pros:
+        - "Fewer iterations than binary search"
+      cons:
+        - "More comparisons per iteration"
+        - "Requires sorted data"
+
+    - name: "Jump Search"
+      timeComplexity:
+        best: "O(1)"
+        average: "O(√n)"
+        worst: "O(√n)"
+      spaceComplexity: "O(1)"
+      description: "Jumps ahead by fixed steps, then linear search in block."
+      useCases:
+        - "Sorted arrays"
+        - "When binary search overhead is high"
+      pros:
+        - "Better than linear"
+        - "Works with any jump size"
+      cons:
+        - "Requires sorted data"
+        - "Slower than binary search"
+
+    - name: "Exponential Search"
+      timeComplexity:
+        best: "O(1)"
+        average: "O(log n)"
+        worst: "O(log n)"
+      spaceComplexity: "O(1)"
+      description: "Finds range where element exists, then binary search in that range."
+      useCases:
+        - "Unbounded/infinite arrays"
+        - "Better than binary for nearby elements"
+      pros:
+        - "Good for unbounded searches"
+        - "Efficient for nearby elements"
+      cons:
+        - "Requires sorted data"
+        - "Two-phase approach"
+
+dataStructures:
+  title: "Data Structures"
+  icon: "🗂️"
+  color: "#95E1D3"
+  structures:
+    - name: "Array"
+      timeComplexity:
+        access: "O(1)"
+        search: "O(n)"
+        insertion: "O(n)"
+        deletion: "O(n)"
+      spaceComplexity: "O(n)"
+      description: "Contiguous memory locations storing elements of same type."
+      useCases:
+        - "Random access needed"
+        - "Fixed size data"
+        - "Matrix operations"
+      pros:
+        - "Fast access"
+        - "Cache friendly"
+        - "Simple"
+      cons:
+        - "Fixed size"
+        - "Expensive insertion/deletion"
+
+    - name: "Linked List"
+      timeComplexity:
+        access: "O(n)"
+        search: "O(n)"
+        insertion: "O(1)"
+        deletion: "O(1)"
+      spaceComplexity: "O(n)"
+      description: "Nodes connected via pointers, dynamic size."
+      useCases:
+        - "Dynamic size"
+        - "Frequent insertions/deletions"
+        - "Unknown size"
+      pros:
+        - "Dynamic size"
+        - "Efficient insertion/deletion"
+      cons:
+        - "No random access"
+        - "Extra memory for pointers"
+
+    - name: "Stack"
+      timeComplexity:
+        push: "O(1)"
+        pop: "O(1)"
+        peek: "O(1)"
+      spaceComplexity: "O(n)"
+      description: "LIFO (Last In First Out) data structure."
+      useCases:
+        - "Function calls"
+        - "Undo operations"
+        - "Expression evaluation"
+      pros:
+        - "Simple"
+        - "Fast operations"
+        - "Memory efficient"
+      cons:
+        - "Limited access"
+        - "Size limitations"
+
+    - name: "Queue"
+      timeComplexity:
+        enqueue: "O(1)"
+        dequeue: "O(1)"
+        peek: "O(1)"
+      spaceComplexity: "O(n)"
+      description: "FIFO (First In First Out) data structure."
+      useCases:
+        - "BFS"
+        - "Task scheduling"
+        - "Print queue"
+      pros:
+        - "Fair ordering"
+        - "Fast operations"
+      cons:
+        - "Limited access"
+        - "Size limitations"
+
+    - name: "Hash Table"
+      timeComplexity:
+        search: "O(1) avg"
+        insertion: "O(1) avg"
+        deletion: "O(1) avg"
+      spaceComplexity: "O(n)"
+      description: "Key-value pairs with hash function for indexing."
+      useCases:
+        - "Fast lookups"
+        - "Caching"
+        - "Dictionaries"
+      pros:
+        - "Very fast operations"
+        - "Flexible keys"
+      cons:
+        - "Hash collisions"
+        - "Unordered"
+        - "Space overhead"
+
+    - name: "Binary Search Tree"
+      timeComplexity:
+        search: "O(log n) avg"
+        insertion: "O(log n) avg"
+        deletion: "O(log n) avg"
+      spaceComplexity: "O(n)"
+      description: "Binary tree where left child < parent < right child."
+      useCases:
+        - "Ordered data"
+        - "Range queries"
+        - "Priority queues"
+      pros:
+        - "Ordered data"
+        - "Fast operations"
+        - "Dynamic"
+      cons:
+        - "Can become unbalanced"
+        - "Complex implementation"
+
+    - name: "AVL Tree"
+      timeComplexity:
+        search: "O(log n)"
+        insertion: "O(log n)"
+        deletion: "O(log n)"
+      spaceComplexity: "O(n)"
+      description: "Self-balancing BST with height difference ≤ 1."
+      useCases:
+        - "Frequent searches"
+        - "Databases"
+        - "File systems"
+      pros:
+        - "Always balanced"
+        - "Guaranteed O(log n)"
+      cons:
+        - "Complex rotations"
+        - "Extra space for height"
+
+    - name: "Heap"
+      timeComplexity:
+        findMin: "O(1)"
+        insertion: "O(log n)"
+        deletion: "O(log n)"
+      spaceComplexity: "O(n)"
+      description: "Complete binary tree with heap property (min/max)."
+      useCases:
+        - "Priority queues"
+        - "Heap sort"
+        - "Graph algorithms"
+      pros:
+        - "Fast min/max access"
+        - "Efficient priority queue"
+      cons:
+        - "No fast search"
+        - "Complex implementation"
+
+    - name: "Trie"
+      timeComplexity:
+        search: "O(m)"
+        insertion: "O(m)"
+        deletion: "O(m)"
+      spaceComplexity: "O(ALPHABET_SIZE * m * n)"
+      description: "Tree for storing strings, prefix-based structure."
+      useCases:
+        - "Autocomplete"
+        - "Spell checkers"
+        - "IP routing"
+      pros:
+        - "Fast prefix search"
+        - "Memory efficient for common prefixes"
+      cons:
+        - "Large space for sparse data"
+        - "Complex implementation"
+
+    - name: "Graph (Adjacency List)"
+      timeComplexity:
+        addVertex: "O(1)"
+        addEdge: "O(1)"
+        removeEdge: "O(E)"
+      spaceComplexity: "O(V + E)"
+      description: "Vertices connected by edges, using list representation."
+      useCases:
+        - "Social networks"
+        - "Maps"
+        - "Web crawling"
+      pros:
+        - "Space efficient for sparse graphs"
+        - "Fast iteration"
+      cons:
+        - "Slow edge lookup"
+        - "Complex for dense graphs"
+
+graph:
+  title: "Graph Algorithms"
+  icon: "🕸️"
+  color: "#F38181"
+  algorithms:
+    - name: "Breadth-First Search (BFS)"
+      timeComplexity:
+        best: "O(V + E)"
+        average: "O(V + E)"
+        worst: "O(V + E)"
+      spaceComplexity: "O(V)"
+      description: "Explores neighbors level by level using a queue."
+      useCases:
+        - "Shortest path unweighted"
+        - "Level order traversal"
+        - "Web crawling"
+      pros:
+        - "Finds shortest path"
+        - "Complete search"
+        - "Simple"
+      cons:
+        - "Uses more memory"
+        - "Not optimal for weighted graphs"
+
+    - name: "Depth-First Search (DFS)"
+      timeComplexity:
+        best: "O(V + E)"
+        average: "O(V + E)"
+        worst: "O(V + E)"
+      spaceComplexity: "O(V)"
+      description: "Explores as far as possible along each branch using stack."
+      useCases:
+        - "Cycle detection"
+        - "Topological sorting"
+        - "Maze solving"
+      pros:
+        - "Memory efficient"
+        - "Detects cycles"
+        - "Topological sort"
+      cons:
+        - "May not find shortest path"
+        - "Can get stuck in infinite loops"
+
+    - name: "Dijkstra's Algorithm"
+      timeComplexity:
+        best: "O((V + E) log V)"
+        average: "O((V + E) log V)"
+        worst: "O((V + E) log V)"
+      spaceComplexity: "O(V)"
+      description: "Finds shortest path in weighted graph with non-negative weights."
+      useCases:
+        - "GPS navigation"
+        - "Network routing"
+        - "Shortest path problems"
+      pros:
+        - "Optimal paths"
+        - "Works with weighted graphs"
+      cons:
+        - "Doesn't work with negative weights"
+        - "Slower than BFS"
+
+    - name: "A* Algorithm"
+      timeComplexity:
+        best: "O(E)"
+        average: "O(E)"
+        worst: "O(V * E)"
+      spaceComplexity: "O(V)"
+      description: "Heuristic-based shortest path algorithm."
+      useCases:
+        - "Pathfinding in games"
+        - "Route planning"
+        - "Robotics"
+      pros:
+        - "Faster than Dijkstra with good heuristic"
+        - "Optimal"
+      cons:
+        - "Requires good heuristic"
+        - "Memory intensive"
+
+    - name: "Prim's Algorithm"
+      timeComplexity:
+        best: "O(E log V)"
+        average: "O(E log V)"
+        worst: "O(E log V)"
+      spaceComplexity: "O(V)"
+      description: "Finds minimum spanning tree by growing tree from starting vertex."
+      useCases:
+        - "Network design"
+        - "Clustering"
+        - "Approximation algorithms"
+      pros:
+        - "Efficient for dense graphs"
+        - "Simple implementation"
+      cons:
+        - "Requires connected graph"
+        - "Greedy approach"
+
+    - name: "Kruskal's Algorithm"
+      timeComplexity:
+        best: "O(E log E)"
+        average: "O(E log E)"
+        worst: "O(E log E)"
+      spaceComplexity: "O(V)"
+      description: "Finds MST by sorting edges and adding smallest edge that doesn't create cycle."
+      useCases:
+        - "Network design"
+        - "Clustering"
+        - "Image segmentation"
+      pros:
+        - "Works for disconnected graphs"
+        - "Easy to implement"
+      cons:
+        - "Requires sorting edges"
+        - "Uses union-find"
+
+advancedAlgorithms:
+  title: "Advanced Techniques"
+  icon: "🧠"
+  color: "#AA96DA"
+  techniques:
+    - name: "Dynamic Programming"
+      category: "Paradigm"
+      description: "Solves complex problems by breaking them down into simpler subproblems."
+      keyPoints:
+        - "Optimal substructure"
+        - "Overlapping subproblems"
+        - "Memoization or tabulation"
+        - "Bottom-up or top-down approach"
+      examples:
+        - "Fibonacci"
+        - "Knapsack"
+        - "Longest Common Subsequence"
+        - "Edit Distance"
+      whenToUse:
+        - "Optimization problems"
+        - "Counting problems"
+        - "Overlapping subproblems"
+
+    - name: "Greedy Algorithms"
+      category: "Paradigm"
+      description: "Makes locally optimal choice at each step hoping to find global optimum."
+      keyPoints:
+        - "Greedy choice property"
+        - "Optimal substructure"
+        - "No backtracking"
+        - "Fast execution"
+      examples:
+        - "Huffman Coding"
+        - "Activity Selection"
+        - "Fractional Knapsack"
+        - "Dijkstra"
+      whenToUse:
+        - "Optimization problems"
+        - "When greedy choice is safe"
+        - "Need fast solution"
+
+    - name: "Backtracking"
+      category: "Paradigm"
+      description: "Explores all possible solutions by incrementally building candidates."
+      keyPoints:
+        - "Recursive approach"
+        - "Abandons candidates when they cannot lead to solution"
+        - "DFS-like exploration"
+        - "Constraint satisfaction"
+      examples:
+        - "N-Queens"
+        - "Sudoku Solver"
+        - "Hamiltonian Path"
+        - "Subset Sum"
+      whenToUse:
+        - "Constraint satisfaction"
+        - "Combinatorial problems"
+        - "Finding all solutions"
+
+    - name: "Divide and Conquer"
+      category: "Paradigm"
+      description: "Divides problem into smaller subproblems, solves them, and combines results."
+      keyPoints:
+        - "Divide into subproblems"
+        - "Conquer subproblems recursively"
+        - "Combine solutions"
+        - "Often logarithmic depth"
+      examples:
+        - "Merge Sort"
+        - "Quick Sort"
+        - "Binary Search"
+        - "Strassen's Matrix"
+      whenToUse:
+        - "Problem can be divided"
+        - "Subproblems are independent"
+        - "Parallelizable"
+
+    - name: "Branch and Bound"
+      category: "Optimization"
+      description: "Systematically enumerates candidates by exploring branches of state space."
+      keyPoints:
+        - "Uses bounding functions"
+        - "Prunes search space"
+        - "Optimal solution guaranteed"
+        - "Memory intensive"
+      examples:
+        - "Traveling Salesman"
+        - "0/1 Knapsack"
+        - "Job Assignment"
+      whenToUse:
+        - "Exact optimization needed"
+        - "Can compute bounds"
+        - "Small to medium problems"
+
+    - name: "Hashing"
+      category: "Technique"
+      description: "Maps data to fixed-size values using hash function."
+      keyPoints:
+        - "O(1) average lookup"
+        - "Hash collisions"
+        - "Load factor"
+        - "Collision resolution"
+      examples:
+        - "Hash Tables"
+        - "Rabin-Karp"
+        - "Bloom Filters"
+        - "Consistent Hashing"
+      whenToUse:
+        - "Fast lookups needed"
+        - "Caching"
+        - "Duplicate detection"
+        - "Sets/Maps"
+
+bigOReference:
+  title: "Big-O Complexity Chart"
+  complexities:
+    - notation: "O(1)"
+      name: "Constant"
+      color: "#00C853"
+      description: "Best possible. Time doesn't change with input size."
+      examples:
+        - "Array access"
+        - "Hash table lookup"
+        - "Stack push/pop"
+
+    - notation: "O(log n)"
+      name: "Logarithmic"
+      color: "#64DD17"
+      description: "Excellent. Doubles input, adds constant time."
+      examples:
+        - "Binary search"
+        - "Balanced tree operations"
+
+    - notation: "O(n)"
+      name: "Linear"
+      color: "#FFD600"
+      description: "Good. Time grows linearly with input."
+      examples:
+        - "Linear search"
+        - "Array traversal"
+
+    - notation: "O(n log n)"
+      name: "Linearithmic"
+      color: "#FF6D00"
+      description: "Fair. Most efficient comparison sorts."
+      examples:
+        - "Merge sort"
+        - "Quick sort (average)"
+        - "Heap sort"
+
+    - notation: "O(n²)"
+      name: "Quadratic"
+      color: "#FF3D00"
+      description: "Bad. Nested loops over input."
+      examples:
+        - "Bubble sort"
+        - "Selection sort"
+        - "Insertion sort"
+
+    - notation: "O(2ⁿ)"
+      name: "Exponential"
+      color: "#D50000"
+      description: "Very bad. Doubles with each input increase."
+      examples:
+        - "Recursive Fibonacci"
+        - "Power set generation"
+
+    - notation: "O(n!)"
+      name: "Factorial"
+      color: "#AA00FF"
+      description: "Terrible. Avoid if possible."
+      examples:
+        - "Permutation generation"
+        - "Traveling salesman (brute force)"
+
+algorithmTips:
+  - category: "Problem Solving"
+    tips:
+      - "Understand the problem before coding"
+      - "Consider edge cases and constraints"
+      - "Think about time and space complexity"
+      - "Start with brute force, then optimize"
+      - "Test with small examples first"
+
+  - category: "Optimization"
+    tips:
+      - "Use hash tables for O(1) lookups"
+      - "Consider two-pointer technique"
+      - "Use sliding window for subarrays"
+      - "Binary search for sorted data"
+      - "Memoization for overlapping subproblems"
+
+  - category: "Common Patterns"
+    tips:
+      - "Frequency counter pattern"
+      - "Multiple pointers pattern"
+      - "Sliding window pattern"
+      - "Divide and conquer pattern"
+      - "Dynamic programming pattern"

@@ -1,0 +1,112 @@
+/* Container & title */
+.tree-visualizer {
+  margin: 1rem auto 0;
+  max-width: 1100px;
+}
+.tree-title {
+  margin: 0 0 .75rem;
+}
+
+/* Toolbar */
+.tree-toolbar {
+  margin: .75rem 0 1rem;
+  background: var(--surface-bg, #0b1220);
+  border: 1px solid var(--border, #243044);
+  border-radius: 1rem;
+  padding: .9rem 1rem;
+}
+.tree-toolbar__row {
+  display: grid;
+  grid-template-columns: auto minmax(220px, 1fr) auto;
+  gap: .75rem 1rem;
+  align-items: center;
+}
+.tree-label {
+  font-weight: 600;
+  color: var(--theme-text-secondary, #a7b0c0);
+}
+.tree-input {
+  width: 100%;
+  padding: .55rem .75rem;
+  border-radius: .75rem;
+  border: 1px solid var(--border, #243044);
+  background: var(--panel, #0f172a);
+  color: var(--text, #e5e7eb);
+}
+.tree-buttons {
+  display: inline-flex;
+  gap: .5rem;
+  flex-wrap: wrap;
+}
+.tree-btn {
+  padding: .5rem .9rem;
+  border-radius: .75rem;
+  border: 1px solid var(--border, #243044);
+  background: var(--panel, #0b1220);
+  color: var(--text, #e5e7eb);
+  font-weight: 600;
+}
+.tree-btn:hover:not(:disabled) { filter: brightness(1.08); }
+.tree-btn:disabled {
+  opacity: .65;            /* was .55 */
+  background: #1a2335;     /* subtle lift so it doesn’t vanish into panel */
+  border-color: #2a3853;
+}
+.tree-btn--primary {
+  background: var(--accent, #2563eb);
+  border-color: var(--accent, #2563eb);
+  color: #fff;
+}
+.tree-btn--ghost { background: transparent; }
+
+/* Order panel */
+.tree-order {
+  padding: .9rem 1rem;
+  background: var(--surface-bg, #0b1220);
+  border: 1px solid var(--border, #243044);
+  border-radius: 1rem;
+}
+.tree-order__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: .6rem;
+  gap: .75rem;
+}
+.tree-order__title {
+  font-weight: 700;
+  color: var(--text, #e5e7eb);
+}
+.tree-order__line {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem .6rem;
+  align-items: center;
+}
+.tree-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 36px;
+  padding: .35rem .66rem;
+  border-radius: 999px;
+  background: var(--chip-bg, #111827);
+  color: var(--text, #e5e7eb);
+  border: 1px solid var(--border, #243044);
+  font-weight: 700;
+}
+.tree-arrow {
+  opacity: .7;
+  margin: 0 .15rem;
+}
+
+/* Message bar */
+.tree-message {
+  margin: .75rem 0 0;
+  padding: .65rem .8rem;
+  background: var(--panel, #0f172a);
+  border: 1px solid var(--border, #243044);
+  border-radius: .75rem;
+  color: var(--theme-text-secondary, #a7b0c0);
+  font-size: .95rem;
+}

@@ -1,0 +1,517 @@
+
+/* ----------------- Modern Responsive Footer Styles ----------------- */
+* {
+  box-sizing: border-box; /* Ensure consistent box model for all elements */
+}
+
+.footer-container {
+  position: relative;
+  background: var(--card-bg, #21262d); /* Dark bg with high contrast */
+  color: var(--text-primary, #e6edf3); /* Light text for readability (contrast >7:1) */
+  padding: 60px 0 20px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  z-index: 1;
+  will-change: opacity, transform; /* Performance optimization for animations */
+  width: 100%; /* Ensure full width */
+}
+
+.footer-container.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.footer-wave {
+  position: absolute;
+  top: -1px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  z-index: 0;
+}
+
+.footer-wave svg {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 55px;
+  min-height: 55px;
+}
+
+.footer-wave .shape-fill {
+  fill: var(--card-bg, #21262d); 
+  transition: fill 0.3s ease;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  margin-bottom: 30px;
+  position: relative;
+  z-index: 2;
+  flex: 1;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.2s, transform 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.2s;
+  overflow: visible;
+  justify-items: start; /* Align columns to start for better left alignment */
+  align-items: start; /* Align items to top */
+}
+
+.footer-container.visible .footer-content {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Staggered animation for footer columns */
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0.3s, transform 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
+  overflow: visible;
+  width: 100%; /* Ensure full width within grid cell */
+}
+
+.footer-container.visible .footer-column:nth-child(1) { transition-delay: 0.3s; }
+.footer-container.visible .footer-column:nth-child(2) { transition-delay: 0.4s; }
+.footer-container.visible .footer-column:nth-child(3) { transition-delay: 0.5s; }
+.footer-container.visible .footer-column:nth-child(4) { transition-delay: 0.6s; }
+
+.footer-container.visible .footer-column {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.brand-column {
+  padding-right: 20px;
+  overflow: visible;
+  justify-content: flex-start; /* Align brand content to top-left */
+}
+
+/* Brand Section */
+.brand-header {
+  margin-bottom: 25px;
+  overflow: visible;
+  text-align: left; /* Ensure left alignment for brand */
+}
+
+.logo-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: flex-start; /* Left-align logo elements */
+  margin-bottom: 15px;
+  overflow: visible;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1); /* Smooth hover for entire logo */
+}
+
+.logo-wrapper:hover {
+  transform: scale(1.02); /* Subtle scale on hover */
+}
+
+.logo-icon {
+  font-size: 28px;
+  color: var(--user-accent-primary);
+  margin-right: 12px;
+  filter: drop-shadow(0 0 8px rgba(88, 166, 255, 0.3)); /* Enhanced glow for dark theme */
+  transition: filter 0.3s ease, transform 0.3s ease;
+  flex-shrink: 0; /* Prevent icon from shrinking */
+}
+
+.logo-wrapper:hover .logo-icon {
+  filter: drop-shadow(0 0 12px rgba(88, 166, 255, 0.5));
+  transform: rotate(5deg); /* Playful rotation on hover */
+}
+
+.logo-text {
+  font-size: 24px;
+  font-weight: 700;
+  background: linear-gradient(90deg, var(--text-primary, #e6edf3), var(--accent-color, #58a6ff));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: var(--user-accent-primary); /* fallback if gradient doesn't render */
+  -webkit-text-fill-color: transparent;
+  letter-spacing: -0.5px;
+  transition: background 0.3s ease; /* Animate gradient shift */
+  flex: 1; /* Allow text to take available space */
+  white-space: nowrap; /* Prevent text wrap */
+}
+
+/* .logo-wrapper:hover .logo-text {
+  background: linear-gradient(90deg, var(--user-accent-primary), var(--user-accent-secondary));
+} */
+
+.logo-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  margin-right: 12px;
+  object-fit: cover;
+  display: block;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4); /* Darker shadow for dark theme */
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease;
+  flex-shrink: 0; /* Prevent image from shrinking */
+}
+
+.logo-image:hover {
+  transform: scale(1.05) rotate(360deg); /* Full rotation on hover for fun effect */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+.brand-tagline {
+  color: var(--text-secondary, rgba(230, 237, 243, 0.8));
+  font-size: 15px;
+  line-height: 1.6;
+  margin: 0;
+  max-width: 280px;
+  font-weight: 400;
+  transition: color 0.3s ease;
+  text-align: left; /* Left-align tagline */
+}
+
+.logo-wrapper:hover .brand-tagline {
+  color: var(--text-primary, #e6edf3); /* Highlight on hover */
+}
+
+.tech-pills {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 25px;
+  overflow: visible;
+  justify-content: flex-start; /* Left-align pills */
+  align-items: center;
+}
+
+.tech-pill {
+  background: var(--surface-bg, rgba(255, 255, 255, 0.05));
+  color: var(--user-accent-primary);
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+  border: 1px solid var(--border-primary, rgba(240, 246, 252, 0.1));
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  text-decoration: none;
+  position: relative;
+  overflow: hidden; /* For ripple effect */
+  white-space: nowrap; /* Prevent pill text wrap */
+}
+
+.tech-pill::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.6s ease; /* Slower shimmer for elegance */
+}
+
+.tech-pill:hover::before {
+  left: 100%;
+}
+
+.tech-pill:hover {
+  background: var(--accent-light, rgba(88, 166, 255, 0.15));
+  transform: translateY(-2px) scale(1.05);
+  border-color: var(--user-accent-secondary);
+  box-shadow: 0 4px 12px rgba(88, 166, 255, 0.2);
+  color: var(--user-accent-secondary);
+}
+
+.tech-pill:focus {
+  outline: 2px solid var(--user-accent-primary);
+  outline-offset: 2px; /* Accessibility focus */
+}
+
+.footer-credits a {
+  color: var(--user-accent-primary);
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  margin: 0 2px;
+  position: relative;
+  display: inline-block; /* Ensure inline alignment */
+}
+
+.footer-credits a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px; /* Thicker underline */
+  background: linear-gradient(90deg, var(--user-accent-primary), var(--user-accent-secondary));
+  transition: width 0.3s ease;
+  border-radius: 1px;
+}
+
+.footer-credits a:hover::after {
+  width: 100%;
+}
+
+.footer-credits a:hover {
+  color: var(--user-accent-primary);
+  text-decoration: underline;
+  transform: translateY(-1px); /* Lift on hover */
+}
+
+.heart-icon {
+  color: var(--success-color, #f48fb1);
+  margin: 0 4px;
+  animation: heartbeat 2s infinite;
+  transition: color 0.3s ease, animation-duration 0.3s ease; /* Smooth color and speed change */
+  display: inline-block; /* Ensure proper inline alignment */
+}
+
+.heart-icon:hover {
+  color: #ef4444; /* Brighter red on hover for emphasis */
+  animation-duration: 1s; /* Faster beat on hover */
+}
+
+@keyframes heartbeat {
+  0% { transform: scale(1); }
+  14% { transform: scale(1.3); }
+  28% { transform: scale(1); }
+  42% { transform: scale(1.3); }
+  70% { transform: scale(1); }
+  100% { transform: scale(1); }
+}
+
+/* Column Titles */
+.column-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-primary, #e6edf3);
+  margin-bottom: 20px;
+  position: relative;
+  padding-bottom: 10px;
+  text-align: left;
+  transition: color 0.3s ease;
+  width: 100%; /* Full width for underline alignment */
+}
+
+.column-title:hover {
+  color: var(--user-accent-primary); /* Color shift on hover */
+}
+
+.column-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--user-accent-primary), var(--user-accent-secondary));
+  border-radius: 3px;
+  transition: width 0.3s ease, background 0.3s ease;
+}
+
+.column-title:hover::after {
+  width: 60px; /* Extend underline on hover */
+  background: linear-gradient(90deg, var(--user-accent-secondary), var(--user-accent-primary));
+}
+
+.para-text {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;              /* spacing between items */
+  font-size: 16px;
+  color: var(--text-primary, #e6edf3);
+  margin-top: 20px;
+  white-space: nowrap;   /* prevents line breaks */
+  transition: color 0.3s ease;
+  width: 100%; /* Ensure centered alignment */
+}
+
+.para-text:hover {
+  color: var(--user-accent-primary); /* Highlight entire text on hover */
+}
+
+.para-text a {
+  color: var(--user-accent-primary);
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  display: inline-block; /* Inline alignment for link */
+}
+
+.para-text a::before {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--user-accent-primary);
+  transition: width 0.3s ease;
+}
+
+.para-text a:hover::before {
+  width: 100%;
+}
+
+.para-text a:hover {
+  color: var(--accent-hover, #2563eb);
+  text-decoration: underline;
+  transform: translateX(2px); /* Subtle slide on hover */
+}
+
+/* Footer Links */
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  overflow: visible;
+  width: 100%; /* Full width for consistent alignment */
+}
+
+.footer-links li {
+  margin-bottom: 12px;
+  width: 100%;
+  position: relative;
+  display: block; /* Ensure full width for list items */
+}
+
+.footer-links a {
+  color: var(--text-secondary, rgba(230, 237, 243, 0.8));
+  text-decoration: none;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 4px 0;
+  position: relative;
+  overflow: hidden; /* For ripple effect */
+  width: 100%; /* Full width for underline alignment */
+}
+
+.footer-links a::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px; /* Thicker underline */
+  background: linear-gradient(90deg, var(--user-accent-primary), var(--user-accent-secondary));
+  transition: width 0.4s ease;
+  border-radius: 1px;
+}
+
+.footer-links a:hover::before {
+  width: 100%;
+}
+
+.footer-links a:hover {
+  color: var(--user-accent-secondary);
+  transform: translateX(5px);
+  padding-left: 8px; /* Slight indent on hover */
+}
+
+.link-icon {
+  margin-right: 10px;
+  font-size: 12px;
+  opacity: 0.7;
+  transition: all 0.3s ease;
+  will-change: transform; /* Optimize icon animation */
+  flex-shrink: 0; /* Prevent icon shrinking */
+}
+
+.footer-links a:hover .link-icon {
+  opacity: 1;
+  transform: translateX(3px) scale(1.1); /* Scale and move on hover */
+}
+
+.footer-links a:focus {
+  outline: 2px solid var(--accent-primary, #58a6ff);
+  outline-offset: 2px; /* Accessibility focus */
+}
+
+/* Newsletter Section */
+.newsletter-column {
+align-items: center;
+}
+
+.newsletter-description {
+  color: var(--text-secondary, rgba(230, 237, 243, 0.8));
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  overflow: visible;
+  transition: color 0.3s ease;
+  width: 100%; /* Full width for alignment */
+}
+
+.newsletter-description:hover {
+  color: var(--text-primary, #e6edf3); /* Subtle highlight */
+}
+
+.newsletter-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  overflow: visible;
+  width: 100%; /* Ensure form takes full width */
+}
+
+.input-container {
+  position: relative;
+  overflow: visible;
+  width: 100%;
+}
+
+.input-icon {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-muted, rgba(230, 237, 243, 0.6));
+  font-size: 16px;
+  transition: color 0.3s ease, transform 0.3s ease;
+  pointer-events: none; /* Prevent icon interference */
+}
+
+.newsletter-input {
+  width: 100%;
+  padding: 14px 15px 14px 45px;
+  border: none;
+  background: var(--surface-bg, rgba(255, 255, 255, 0.05));
+  border: 1px solid var(--border-primary, rgba(240, 246, 252, 0.1));
+  color: var(--text-primary, #e6edf3);
+  border-radius: 8px;
+  font-size: 14px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.newsletter-input:focus + .input-icon,
+.newsletter-input:valid + .input-icon {
+  color: var(--accent-primary, #58a6ff);
+  transform: translateY(-50%) scale(1.1); /* Icon bounce on focus */
+}
+
+.newsletter-input:focus {
+  outline: none;
+  border-color: var(--user-accent-primary);
+  box-shadow: 0 0 0 3px rgba(88, 166, 255, 0.15); /* Dark theme glow */
+}
+ 

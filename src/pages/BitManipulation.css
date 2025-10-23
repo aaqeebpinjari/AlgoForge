@@ -1,0 +1,115 @@
+.bit-page {
+  padding: 2rem;
+  color: #222;
+  font-family: 'Inter', sans-serif;
+}
+
+.page-header h1 {
+  color: #0077cc;
+  margin-bottom: 0.5rem;
+}
+
+.page-subtitle {
+  color: #555;
+}
+
+.controls-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.input-group {
+  display: flex;
+  gap: 1rem;
+}
+
+.bit-input {
+  padding: 0.5rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  width: 140px;
+}
+
+.operation-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.control-btn {
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+}
+
+.set-btn { background: #28a745; }
+.clear-btn { background: #dc3545; }
+.toggle-btn { background: #ffc107; color: #000; }
+.check-btn { background: #007bff; }
+.reset-btn { background: #6c757d; }
+
+.binary-display {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.bit-box {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background: #eaeaea;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+.bit-box.highlight {
+  background: #ffcc00;
+  box-shadow: 0 0 10px #ffcc00;
+}
+
+.decimal-value {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.pseudocode {
+  background: #f9f9f9;
+  padding: 1rem;
+  border-radius: 10px;
+  overflow-x: auto;
+}
+
+.code-snippet {
+  margin-top: 0.8rem;
+}
+
+.code-toggle-button {
+  width: 100%;
+  text-align: left;
+  font-weight: bold;
+  background: #0077cc;
+  color: white;
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+.code-content {
+  background: #f0f0f0;
+  padding: 0.8rem;
+  border-radius: 8px;
+  margin-top: 0.5rem;
+}

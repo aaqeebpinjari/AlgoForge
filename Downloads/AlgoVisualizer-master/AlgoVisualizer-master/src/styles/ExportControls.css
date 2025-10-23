@@ -1,0 +1,263 @@
+/* =========================
+   Light/Dark Mode Variables
+========================= */
+:root {
+    --btn-bg: #58a6ff;
+    --btn-text: #0d1117;
+    --btn-hover-bg: #79c0ff;
+    --panel-bg: #ffffff;
+    --panel-text: #2c3e50;
+    --panel-border: #58a6ff;
+    --select-bg: #ffffff;
+    --select-text: #2c3e50;
+    --info-bg: #f8f9fa;
+    --info-border: #58a6ff;
+    --info-text: #495057;
+}
+
+[data-theme="light"] {
+    --btn-bg: #58a6ff;
+    --btn-text: #0d1117;
+    --btn-hover-bg: #79c0ff;
+    --panel-bg: #ffffff;
+    --panel-text: #2c3e50;
+    --panel-border: #58a6ff;
+    --select-bg: #ffffff;
+    --select-text: #2c3e50;
+    --info-bg: #f8f9fa;
+    --info-border: #58a6ff;
+    --info-text: #495057;
+}
+
+[data-theme="dark"] {
+    --btn-bg: #58a6ff;
+    --btn-text: #0d1117;
+    --btn-hover-bg: #79c0ff;
+    --panel-bg: #21262d;
+    --panel-text: #e6edf3;
+    --panel-border: #58a6ff;
+    --select-bg: #21262d;
+    --select-text: #e6edf3;
+    --info-bg: #21262d;
+    --info-border: #58a6ff;
+    --info-text: #8b949e;
+}
+
+/* =========================
+   Export Controls
+========================= */
+.export-controls {
+    position: relative;
+    display: inline-block;
+    margin: 10px;
+}
+
+.export-toggle-btn,
+.start-recording-btn,
+.snapshot-btn,
+.stop-recording-btn,
+.capture-frame-btn {
+    padding: 10px 15px;
+    border: none;
+    height: 55px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--btn-text);
+    background: var(--btn-bg);
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.export-toggle-btn:hover,
+.start-recording-btn:hover:not(:disabled),
+.snapshot-btn:hover,
+.stop-recording-btn:hover,
+.capture-frame-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+    background: var(--btn-hover-bg);
+}
+
+.start-recording-btn:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+/* =========================
+   Export Panel
+========================= */
+.export-panel {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: var(--panel-bg) !important;
+    color: var(--panel-text);
+    border: 2px solid var(--panel-border);
+    border-radius: 12px;
+    padding: 20px;
+    min-width: 320px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    z-index: 9999;
+    margin-top: 10px;
+}
+
+.export-panel h3 {
+    margin: 0 0 15px 0;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--panel-text);
+}
+
+.option-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.option-group label {
+    font-weight: 600;
+    color: var(--panel-text);
+    font-size: 14px;
+}
+
+.option-group select {
+    padding: 8px 12px;
+    border: 2px solid var(--panel-border);
+    border-radius: 6px;
+    background: var(--select-bg);
+    font-size: 14px;
+    min-width: 140px;
+    color: var(--select-text);
+    font-weight: 500;
+}
+
+/* =========================
+   Export Info Box
+========================= */
+.export-info {
+    background: var(--info-bg);
+    padding: 15px;
+    border-radius: 8px;
+    border: 2px solid var(--info-border);
+    border-left: 4px solid var(--info-border);
+}
+
+.export-info h4 {
+    margin: 0 0 10px 0;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--info-text);
+}
+
+.export-info ul {
+    margin: 0;
+    padding-left: 15px;
+    font-size: 13px;
+    color: var(--info-text);
+    line-height: 1.6;
+    font-weight: 500;
+}
+
+.export-info li {
+    margin-bottom: 5px;
+}
+
+.export-info strong {
+    color: var(--info-text);
+    font-weight: 700;
+}
+
+/* =========================
+   Recording Status
+========================= */
+.recording-status {
+    padding: 12px;
+    border-radius: 8px;
+    text-align: center;
+    color: #e6edf3;
+    background: #f85149;
+    margin-bottom: 15px;
+}
+
+.recording-indicator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.recording-dot {
+    width: 12px;
+    height: 12px;
+    background: #ff4757;
+    border-radius: 50%;
+    margin-right: 8px;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(1.1); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+.recording-duration {
+    font-size: 12px;
+    opacity: 0.9;
+}
+
+/* =========================
+   Responsive Design
+========================= */
+@media (max-width: 768px) {
+    .export-panel {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+        max-width: 350px;
+        max-height: 80vh;
+        overflow-y: auto;
+    }
+    .export-controls {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .export-toggle-btn,
+    .start-recording-btn,
+    .snapshot-btn,
+    .stop-recording-btn,
+    .capture-frame-btn {
+        width: 100%;   /* Buttons full width */
+        height: auto;  /* Allow flexible height */
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    .option-group {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .option-group select {
+        width: 100%; /* Dropdown full width */
+    }
+
+    .export-info {
+        font-size: 14px;
+    }
+}
+

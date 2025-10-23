@@ -1,0 +1,485 @@
+@import './theme.css';
+
+/* 🎯 =========================
+   Reset & Global Styles
+========================= */
+
+/* 🎪 container for mega menu */
+.navbar .mega-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  padding: 16px 20px;
+  background: var(--card-bg, #fff);
+  border: 1px solid rgba(0,0,0,.08);
+  box-shadow: 0 10px 30px rgba(0,0,0,.08);
+  border-radius: 10px;
+  min-width: 720px;
+  z-index: 1000;
+}
+
+/* 🎨 grid of columns */
+.mega-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(200px, 1fr));
+  gap: 20px 32px;
+}
+
+.mega-col { 
+  min-width: 200px; 
+}
+
+.mega-heading {
+  font-weight: 600;
+  margin-bottom: 8px;
+  opacity: .9;
+}
+
+.mega-links {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.mega-link {
+  padding: 6px 8px;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+.mega-link:hover {
+  background: rgba(0,0,0,.06);
+}
+
+/* 🎯 dropdown container positioning */
+.navbar-item.dropdown.mega {
+  position: relative;
+}
+
+/* 🚀 --- MEGA MENU: container & positioning --- */
+.navbar-menu { 
+  position: relative; 
+}
+
+.navbar-item.dropdown.mega { 
+  position: relative; 
+}
+
+.navbar .mega-menu {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: min(1080px, calc(100vw - 32px));
+  padding: 18px 22px;
+  border-radius: 12px;
+  border: 1px solid hsl(0 0% 100% / 0.06);
+  background: var(--mega-bg, rgba(20,20,25,0.88));
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.25),
+    0 1px 0 rgba(255,255,255,0.03) inset;
+  z-index: 1000;
+
+  /* ⚡ safety for small screens / short viewports */
+  max-height: min(72vh, 640px);
+  overflow: auto;
+
+  opacity: 0;
+  transform-origin: top center;
+  transition: opacity .16s ease, transform .16s ease;
+}
+
+.navbar-item.dropdown.mega .dropdown-toggle.active + .mega-menu,
+.navbar-item.dropdown.mega:hover .mega-menu {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* ✨ little top pointer */
+.mega-menu::before {
+  content: "";
+  position: absolute;
+  top: -8px; left: 50%;
+  transform: translateX(-50%);
+  width: 14px; height: 14px;
+  background: inherit;
+  border-top-left-radius: 3px;
+  border: 1px solid hsl(0 0% 100% / 0.06);
+  border-right: none; border-bottom: none;
+  rotate: 45deg;
+  filter: drop-shadow(0 2px 2px rgba(0,0,0,.15));
+}
+
+/* 🎨 --- GRID LAYOUT --- */
+.mega-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(210px, 1fr));
+  gap: 18px 28px;
+}
+
+/* 📱 collapse to 3/2 columns responsively */
+@media (max-width: 1100px) {
+  .mega-grid { 
+    grid-template-columns: repeat(3, minmax(200px, 1fr)); 
+  }
+}
+@media (max-width: 860px) {
+  .mega-grid { 
+    grid-template-columns: repeat(2, minmax(200px, 1fr)); 
+  }
+}
+
+.mega-col {
+  min-width: 200px;
+  padding-right: 8px;
+  position: relative;
+}
+
+/* 🎯 subtle column separators */
+.mega-col:not(:nth-child(4n))::after {
+  content: "";
+  position: absolute;
+  top: 6px; right: -14px; bottom: 6px;
+  width: 1px;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(255,255,255,0.08) 12%,
+    rgba(255,255,255,0.08) 88%,
+    transparent 100%
+  );
+}
+@media (max-width: 1100px) {
+  .mega-col:not(:nth-child(3n))::after { 
+    right: -14px; 
+  }
+  .mega-col:nth-child(3n)::after { 
+    display: none; 
+  }
+}
+@media (max-width: 860px) {
+  .mega-col:not(:nth-child(2n))::after { 
+    right: -14px; 
+  }
+  .mega-col:nth-child(2n)::after { 
+    display: none; 
+  }
+}
+
+/* 🎪 --- TYPOGRAPHY --- */
+.mega-heading {
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: .2px;
+  margin: 2px 0 8px 0;
+  color: var(--mega-heading, #e8eaed);
+}
+
+.mega-links {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.mega-link {
+  display: block;
+  padding: 6px 8px;
+  border-radius: 8px;
+  font-size: 0.92rem;
+  line-height: 1.25rem;
+  text-decoration: none;
+  color: var(--mega-link, #bfc5d0);
+  transition: background .12s ease, color .12s ease, transform .06s ease;
+  white-space: nowrap;
+}
+
+.mega-link:hover {
+  background: rgba(255,255,255,0.08);
+  color: var(--mega-link-hover, #ffffff);
+  transform: translateX(1px);
+}
+
+.mega-link.active {
+  background: rgba(99, 102, 241, 0.18); /* indigo-ish */
+  color: #fff;
+}
+
+/* 🌗 --- LIGHT / DARK THEME (override via your theme classes) --- */
+.navbar.light .mega-menu {
+  --mega-bg: rgba(255,255,255,0.96);
+  --mega-heading: #0f172a;
+  --mega-link: #334155;
+  --mega-link-hover: #0f172a;
+  border-color: rgba(15, 23, 42, 0.08);
+}
+
+.navbar.dark .mega-menu {
+  --mega-bg: rgba(17,18,22,0.92);
+  --mega-heading: #e5e7eb;
+  --mega-link: #c7ced9;
+  --mega-link-hover: #ffffff;
+  border-color: rgba(255,255,255,0.06);
+}
+
+/* 🎯 keep search dropdown above the menu */
+.navbar .search-results { 
+  z-index: 1100; 
+}
+
+/* 🚀 --- container & base --- */
+.navbar .mega-menu.split {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: min(1100px, calc(100vw - 32px));
+  border-radius: 14px;
+  border: 1px solid hsl(220 14% 25% / 0.25);
+  background: linear-gradient(180deg,
+    hsl(220 18% 14% / 0.92),
+    hsl(220 18% 10% / 0.92)
+  );
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow:
+    0 20px 50px rgba(0,0,0,.35),
+    0 1px 0 rgba(255,255,255,.04) inset;
+  z-index: 1000;
+  max-height: min(70vh, 620px);
+  overflow: auto;
+  padding: 16px;
+}
+
+/* 🎨 content split */
+.mega-content {
+  display: grid;
+  grid-template-columns: 2.5fr 1fr; /* left big, right card */
+  gap: 16px;
+}
+@media (max-width: 980px) {
+  .mega-content { 
+    grid-template-columns: 1fr; 
+  }
+}
+
+/* 🎯 left side grid */
+.mega-grid.tidy {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(200px, 1fr));
+  gap: 12px 16px;
+}
+@media (max-width: 1100px) {
+  .mega-grid.tidy { 
+    grid-template-columns: repeat(2, minmax(200px, 1fr)); 
+  }
+}
+
+.mega-col.cardish {
+  background: linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.01));
+  border: 1px solid rgba(255,255,255,.06);
+  border-radius: 10px;
+  padding: 10px 12px;
+}
+
+.mega-heading {
+  font-weight: 700;
+  font-size: .95rem;
+  color: #e6e9f0;
+  margin: 2px 0 8px;
+}
+
+/* 🔗 links */
+.mega-links { 
+  display: grid; 
+  gap: 4px; 
+}
+
+.mega-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 8px;
+  border-radius: 8px;
+  color: #c8cfdb;
+  text-decoration: none;
+  font-size: .92rem;
+  line-height: 1.25rem;
+  transition: background .12s ease, transform .06s ease, color .12s ease;
+}
+.mega-link .dot { 
+  opacity: .35; 
+  translate: 0 -1px; 
+}
+
+.mega-link:hover {
+  background: rgba(99,102,241,.16);
+  color: #ffffff;
+  transform: translateX(1px);
+}
+.mega-link.active {
+  background: rgba(99,102,241,.28);
+  color: #fff;
+}
+
+/* 🎨 right feature card */
+.mega-right { 
+  display: flex; 
+}
+
+.feature-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px;
+  padding: 16px;
+  min-height: 220px;
+  color: #eaf0ff;
+  background:
+    radial-gradient(120px 80px at 80% 10%, rgba(99,102,241,.35), transparent 60%),
+    linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
+  border: 1px solid rgba(255,255,255,.08);
+  overflow: hidden;
+}
+
+.feature-kicker {
+  font-size: .75rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: #a2b0ff;
+  margin-bottom: 6px;
+}
+
+.feature-title {
+  font-weight: 800;
+  font-size: 1.05rem;
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.feature-emoji { 
+  font-size: 1.1rem; 
+}
+
+.feature-desc {
+  font-size: .92rem;
+  color: #cfd7ff;
+  margin: 0 0 12px;
+}
+
+.feature-cta {
+  align-self: start;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #0b1020;
+  background: #aab0ff;
+  font-weight: 700;
+  transition: transform .08s ease, box-shadow .12s ease, background .12s ease;
+  box-shadow: 0 8px 18px rgba(170,176,255,.28);
+}
+.feature-cta:hover {
+  transform: translateY(-1px);
+  background: #c0c5ff;
+}
+
+/* 🖼️ optional image */
+.feature-img {
+  position: absolute;
+  right: -8px; bottom: -8px;
+  width: 120px; height: auto;
+  opacity: .35;
+  pointer-events: none;
+}
+
+/* 🌞 light theme overrides */
+.navbar.light .mega-menu.split {
+  background: linear-gradient(180deg, rgba(255,255,255,.98), rgba(248,250,255,.98));
+  border-color: rgba(15,23,42,.08);
+  color: #0f172a;
+}
+.navbar.light .mega-col.cardish {
+  background: linear-gradient(180deg, rgba(10,18,40,.02), rgba(10,18,40,.01));
+  border-color: rgba(15,23,42,.08);
+}
+.navbar.light .mega-heading { 
+  color: #0f172a; 
+}
+.navbar.light .mega-link { 
+  color: #273143; 
+}
+.navbar.light .mega-link:hover { 
+  color: #0f172a; 
+}
+.navbar.light .feature-card {
+  color: #0f172a;
+  background:
+    radial-gradient(120px 80px at 80% 10%, rgba(99,102,241,.2), transparent 60%),
+    linear-gradient(180deg, rgba(10,18,40,.03), rgba(10,18,40,.01));
+  border-color: rgba(15,23,42,.08);
+}
+.navbar.light .feature-desc { 
+  color: #3a4253; 
+}
+
+/* 🎯 Make navbar always visible at the top */
+.navbar {
+  position: sticky;  /* or fixed */
+  top: 0;
+  z-index: 1200;     /* higher than mega-menu & search results */
+}
+
+/* ⚡ === NAVBAR FIX === */
+.navbar {
+  position: fixed;     /* lock it to the viewport */
+  top: 0;              /* stick to the top */
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 2000;       /* above everything (mega-menu, search, etc.) */
+  background: var(--navbar-bg, rgba(17,18,22,0.92)); /* dark bg fallback */
+  backdrop-filter: blur(8px); /* keep your nice glass effect */
+  -webkit-backdrop-filter: blur(8px);
+}
+
+/* 📏 push page content down so navbar doesn't overlap */
+body {
+  margin: 0;
+  padding-top: 72px; /* adjust to your navbar's actual height */
+}
+
+/* 🆕 Enhanced animation utilities */
+@keyframes smoothMenuReveal {
+  from {
+    opacity: 0;
+    transform: translateY(-10px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.mega-menu.animated {
+  animation: smoothMenuReveal 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  /* 🎭 Smooth menu reveal animation */
+}
+
+/* 🎯 Performance optimization classes */
+.mega-menu {
+  will-change: transform, opacity;
+  /* ⚡ Hint browser for better performance */
+}
+
+/* 🔧 Utility class for enhanced transitions */
+.smooth-transition-all {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  /* 🎪 Enhanced timing function for smoother animations */
+}

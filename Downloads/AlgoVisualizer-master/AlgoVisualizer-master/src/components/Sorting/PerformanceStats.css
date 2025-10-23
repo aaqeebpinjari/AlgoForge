@@ -1,0 +1,63 @@
+.perfstat-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.perfstat-card {
+  display: flex;
+  align-items: center;
+  min-width: 180px;
+  padding: 1.2rem 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+  border: 1px solid #e0e0e0;
+  transition: box-shadow 0.2s;
+  background: #fff;
+}
+
+.perfstat-card:hover {
+  box-shadow: 0 8px 32px rgba(0,0,0,0.13);
+}
+
+.perfstat-icon {
+  margin-right: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.perfstat-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.perfstat-number {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 0.2rem;
+  letter-spacing: 1px;
+  transition: color 0.2s;
+}
+
+.perfstat-label {
+  font-size: 1rem;
+  color: #555;
+  font-weight: 500;
+}
+
+@media (max-width: 600px) {
+  .perfstat-container {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: stretch;
+  }
+  .perfstat-card {
+    min-width: unset;
+    width: 100%;
+    justify-content: flex-start;
+  }
+}

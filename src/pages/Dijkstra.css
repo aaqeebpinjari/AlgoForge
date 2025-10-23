@@ -1,0 +1,68 @@
+.array-container {
+  padding: 20px;
+  text-align: center;
+}
+
+.subtitle {
+  color: gray;
+  margin-bottom: 20px;
+}
+
+.controls {
+  margin: 20px 0;
+}
+
+.controls input {
+  padding: 8px;
+  margin-right: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.controls button {
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.controls button:hover {
+  background-color: #1e40af;
+}
+
+.graph-boxes {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.graph-node {
+  border: 2px solid #2563eb;
+  border-radius: 10px;
+  padding: 15px;
+  width: 100px;
+  background: #e0e7ff;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.info {
+  margin-top: 40px;
+  text-align: left;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+table th,
+table td {
+  border: 1px solid #ccc;
+  padding: 8px;
+}

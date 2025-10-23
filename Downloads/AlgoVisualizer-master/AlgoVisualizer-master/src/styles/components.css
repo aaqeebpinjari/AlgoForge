@@ -1,0 +1,196 @@
+/* =========================
+   Import Google Fonts & Unified Theme
+========================= */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+@import './theme.css';
+
+/* Import component styles */
+@import './navbar.css';
+@import './navbar-top.css';
+@import './pages.css';
+@import './Quiz.css';
+
+/* =========================
+   Global Behavior
+========================= */
+html { scroll-behavior: smooth; }
+
+/* =========================
+   Reset Default Styles
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =========================
+   Global Body & Containers
+========================= */
+html, body, #root, .app-container {
+    background: var(--primary-bg);
+    color: var(--text-primary);
+    min-height: 100vh;
+    height: 100%;
+    font-family: var(--font-family, 'Poppins', sans-serif);
+    line-height: 1.6;
+    transition: var(--transition-normal);
+}
+
+body {
+    overflow-y: scroll;
+}
+
+.app-container {
+    display: flex;
+    flex-direction: column;
+}
+
+/* =========================
+   Main Content
+========================= */
+.main-content {
+    flex: 1;
+    padding: 0;
+    background: transparent;
+}
+
+/* =========================
+   Theme Toggle Button
+========================= */
+.theme-toggle-btn {
+    width: 44px;
+    height: 44px;
+    border: 1px solid #d9e4ff;
+    border-radius: 50%;
+    background: #eef3ff;
+    box-shadow: 0 2px 10px rgba(23,37,84,0.12), inset 0 1px 0 rgba(255,255,255,0.85);
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.15s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.theme-toggle-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(23,37,84,0.18), inset 0 1px 0 rgba(255,255,255,0.9);
+}
+
+[data-theme="dark"] .theme-toggle-btn {
+    background: #1d2230;
+    border-color: #2b3244;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.25), inset 0 1px 0 rgba(255,255,255,0.04);
+}
+
+[data-theme="dark"] .theme-toggle-btn:hover {
+    box-shadow: 0 6px 16px rgba(0,0,0,0.35), inset 0 1px 0 rgba(255,255,255,0.06);
+}
+
+.theme-toggle-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 6px rgba(23,37,84,0.12), inset 0 1px 0 rgba(255,255,255,0.8);
+}
+
+.theme-toggle-btn:focus-visible {
+    outline: 0;
+    box-shadow: 0 0 0 3px rgba(99,123,255,0.35), 0 6px 16px rgba(23,37,84,0.18), inset 0 1px 0 rgba(255,255,255,0.9);
+}
+
+.theme-toggle-btn svg {
+    width: 30px;
+    height: 30px;
+}
+
+/* =========================
+   Links & Buttons
+========================= */
+a, button, .nav-links a {
+    transition: color 0.3s ease, background-color 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* =========================
+   Standardized Button Styles
+========================= */
+button {
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 16px;
+    border-radius: 12px;
+    border: none;
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    font-weight: 600;
+    min-width: 80px;
+    
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+button:hover:not(:disabled) {
+    background-color: var(--button-hover);
+    transform: translateY(-2px) scale(1.03);
+}
+
+button:disabled {
+    background-color: var(--disabled-bg);
+    cursor: not-allowed;
+    
+    transform: none;
+}
+
+/* =========================
+   Mobile Menu
+========================= */
+.nav-links.nav-active {
+    background-color: var(--header-bg);
+}
+
+/* =========================
+   Responsive
+========================= */
+@media (max-width: 1024px) {
+    .main-content {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .theme-toggle-btn svg {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-links {
+        width: 100%;
+        padding: 10px 0;
+        text-align: center;
+    }
+
+    button {
+        white-space: nowrap; /* prevent line breaks */
+        min-width: auto; /* allow smaller buttons */
+    }
+
+    .theme-toggle-btn {
+        width: 32px;
+        height: 32px;
+    }
+
+    .theme-toggle-btn svg {
+        width: 20px;
+        height: 20px;
+    }
+}

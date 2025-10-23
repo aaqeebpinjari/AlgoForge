@@ -1,0 +1,65 @@
+.theme-card h2{
+    color: var(--text-primary);
+}
+.example{
+    display: flex;
+    flex-direction: column;
+} 
+.explanation{
+     width: 90%;
+    margin: 0 auto;
+}
+.explanation ul{
+    display: flex;
+    flex-direction: column;
+}
+.explanation ul li{
+    list-style-type: circle;
+}
+.undirected{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 0 auto;
+} 
+.important{
+    display: flex;
+    flex-direction: column;
+}
+.important ul{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; 
+    padding: 0;
+}
+.important ul li{
+    padding: 12px 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0 , 0, 0, 0.4);
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease;
+}
+.important ul li:hover{
+    color: #ba68c8; 
+    padding-left: 30px;
+    transform: translateY(-5px) scale(1.04);
+}
+.important ul li::before{
+    content: "➤";   
+    position: absolute;
+    padding-left: 10px;
+    left: 0;
+    opacity: 0;    
+    transform: translateX(-10px);
+    transition: all 0.3s ease;
+}
+.important ul li:hover::before{
+    opacity: 1;
+    transform: translateX(0);
+}   
+.summary thead tr th{
+    color: var(--text-primary) !important;
+} 
